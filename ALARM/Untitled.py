@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 import paho.mqtt.client as client
 import os
-import os
 
 def parseFiles(path = '.\\'):
     # r=root, d=directories, f = files
