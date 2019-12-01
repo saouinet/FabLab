@@ -45,11 +45,11 @@ def sub_cb(topic,payload):
     off = (0,0,0,0)
 
     if topic==topic_rouge:
-	rouge=int(payload)	
+	    rouge=int(payload)	
     if topic==topic_vert:
-	vert=int(payload)
+	    vert=int(payload)
     if topic==topic_bleu:
-	bleu=int(payload)
+	    bleu=int(payload)
     if topic==topic_off:
         for i in range(lsize):
             Leds[i]=off
@@ -58,6 +58,19 @@ def sub_cb(topic,payload):
     utime.sleep_ms(100)
     Leds.write()
 
+
+def blinkLeds():
+    global rouge,vert,bleu
+    off = (0,0,0,0)
+    for i in range(lsize):
+        Leds[i]=(rouge,vert,bleu,0)
+        utime.sleep_ms(1000)
+        Leds.write()
+    for i in range(lsize):
+        Leds[i]=off
+        utime.sleep_ms(1000)
+        Leds.write()
+    
 def init_mqtt():
     global client
     print("connect mqtt...")
@@ -86,14 +99,23 @@ def connection():
         if trouve:
             print("connection to raspi-poste1")
             sta_if.connect("raspi-poste1","Burkert67")
+            led = 0
             while not sta_if.isconnected():
+                Leds[led]=(100,100,100,0)
+                Leds.write()
+                if led >= lsize:
+                    led = 0
                 print(".")
                 utime.sleep(1)
+                Leds[led]=(0,0,0,0)
+                Leds.write()
+                led = led+1
+                
             print("Ready: ", sta_if.ifconfig())
             break
 
     
-
+blinkLeds()
 connection()
 init_mqtt()
 client.publish(ilot+b"/"+charriot,"ok")
