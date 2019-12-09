@@ -14,11 +14,11 @@ def getConfig(key):
 		if key == cle_valeur[0]:
 			return strip(cle_valeur[1]
 
-lsize = getConfig("leds")
+nbleds = getConfig("leds")
 ilot = getConfig("ilot")
-charriot = getConfig("charriot")
+chariot = getConfig("chariot")
 
-Leds=neopixel.NeoPixel(machine.Pin(4),lsize,bpp=4)
+Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
 
 sta_if = network.WLAN(network.STA_IF)
 client = MQTTClient(b'esp32_01'+ilot+chariot,b'10.3.141.1')
@@ -29,14 +29,14 @@ bleu = 100
 
  
 
-topic_rouge = ilot+b"/"+charriot+b"/"+b"config"+b"/"+b"rouge"
-topic_vert = ilot+b"/"+charriot+b"/"+b"config"+b"/"+b"vert"
-topic_bleu = ilot+b"/"+charriot+b"/"+b"config"+b"/"+b"bleu"
-topic_off =  ilot+b"/"+charriot+b"/off"
+topic_rouge = ilot+b"/"+chariot+b"/"+b"config"+b"/"+b"rouge"
+topic_vert = ilot+b"/"+chariot+b"/"+b"config"+b"/"+b"vert"
+topic_bleu = ilot+b"/"+chariot+b"/"+b"config"+b"/"+b"bleu"
+topic_off =  ilot+b"/"+chariot+b"/off"
 
 def sub_cb(topic,payload):
     global Leds
-    global lsize
+    global nbleds
     global rouge, topic_rouge
     global vert, topic_vert
     global bleu, topic_bleu
@@ -51,7 +51,7 @@ def sub_cb(topic,payload):
     if topic==topic_bleu:
 	    bleu=int(payload)
     if topic==topic_off:
-        for i in range(lsize):
+        for i in range(nbleds):
             Leds[i]=off
     else:
         Leds[int(payload)-1]=(rouge,vert,bleu,0)
@@ -62,11 +62,11 @@ def sub_cb(topic,payload):
 def blinkLeds():
     global rouge,vert,bleu
     off = (0,0,0,0)
-    for i in range(lsize):
+    for i in range(nbleds):
         Leds[i]=(rouge,vert,bleu,0)
         utime.sleep_ms(1000)
         Leds.write()
-    for i in range(lsize):
+    for i in range(nbleds):
         Leds[i]=off
         utime.sleep_ms(1000)
         Leds.write()
@@ -103,7 +103,7 @@ def connection():
             while not sta_if.isconnected():
                 Leds[led]=(100,100,100,0)
                 Leds.write()
-                if led >= lsize:
+                if led >= nbleds:
                     led = 0
                 print(".")
                 utime.sleep(1)
