@@ -1,0 +1,13 @@
+[Unit]
+Description = scanner 
+After = multi-user.target
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/devs/RPi/scanner.py
+WorkingDirectory=/home/pi/devs/RPi/
+User=pi
+Type=simple
+Restart=always
+KillMode=process
+TimeoutSec=900
+[Install]
+WantedBy = multi-user.target
