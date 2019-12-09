@@ -6,12 +6,12 @@ from umqtt.robust import MQTTClient
 
 
 def getConfig():
-    f = open(config.yaml)
+    f = open("idents.txt")
     config = f.read()
     f.close()
 	choix = config.split("\n")
     idents = []
-	for kv in choix[1:]:
+	for kv in choix:
         idents.append(strip(kv))
     return idents
 
