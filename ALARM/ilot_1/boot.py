@@ -9,6 +9,9 @@ chariot = b"/A"
 ilot = b"/Element"
 TOPIC_OFF = ilot+"/off"
 TOPIC_BLINK = ilot+"/blink"
+LED_OFF =(0,0,0,0)
+LED_WHITE = (0,0,0,100)
+LED_RED = (100, 0, 0, 0)
 
 # define idents configuration
 Idents = getConfig()
@@ -38,33 +41,29 @@ def getConfig():
 
 # make the LEDs blink 1 time
 def blink_active_leds():
-    on = (0,0,0,100)
-    off = (0,0,0,0)
     for i in ActiveLeds:
-        Leds[i]=on
+        Leds[i]=LED_WHITE
         utime.sleep_ms(500)
         Leds.write()
     for i in ActiveLeds:
-        Leds[i]=off
+        Leds[i]=LED_OFF
         utime.sleep_ms(500)
         Leds.write()
 
 # mqtt callback
 def sub_cb(topic,payload,Leds,nbleds):
-    on = (0,0,0,100)
-    off = (0,0,0,0)
     print(topic)
     if topic == TOPIC_BLINK:
         blink_active_leds()
     if topic == TOPIC_OFF:
         for i in range(nbleds):
-            Leds[i]=off
+            Leds[i]=LED_OFF
         ActiveLeds.clear()
     else:
         for pos in range(nbleds):
             if topic == ilot+"/"+Idents[pos]:
                 ActiveLeds.add(pos)
-                Leds[pos]=on
+                Leds[pos]=LED_WHITE
     utime.sleep_ms(100)
     Leds.write()
 
@@ -80,14 +79,14 @@ def init_mqtt(client,Idents,ilot):
             client.subscribe(_nom)
         client.set_callback(sub_cb)
 
-# make the first LED blink
+# make the first LED blink red
 def infoleds():
     utime.sleep_ms(500)
-    Leds[0] = (100, 0, 0, 0)
+    Leds[0] = LED_RED
     Leds.write()
     print(".")
     utime.sleep_ms(500)
-    Leds[0] = (0, 0, 0, 0)
+    Leds[0] = LED_OFF
     Leds.write()
 
 # connect to Wifi
