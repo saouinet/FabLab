@@ -4,7 +4,28 @@ import utime
 import network
 from umqtt.robust import MQTTClient
 
+# constants
+chariot = b"/A"
+ilot = b"/Element"
+TOPIC_OFF = ilot+"/off"
+TOPIC_BLINK = ilot+"/blink"
 
+# define idents configuration
+Idents = getConfig()
+print("Idents :",Idents)
+
+# define LEDs configuration
+nbleds = len(Idents)
+Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
+ActiveLeds = set([i for i in range(len(Idents))])
+
+# define wifi configuration
+sta_if = network.WLAN(network.STA_IF)
+
+# define MQTT configuration
+client = MQTTClient(b"esp32_01"+ilot+chariot,b'10.3.141.1',port=1883)
+
+# get the list of idents stored in the configuration file
 def getConfig():
     f = open("idents.txt")
     config = f.read()
@@ -15,23 +36,7 @@ def getConfig():
         idents.append(kv.strip())
     return idents
 
-Idents = getConfig()
-print("Idents :",Idents)
-nbleds = len(Idents)
-
-ilot = b"/Element"
-chariot = b"/A"
-
-
-Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
-ActiveLeds = set([i for i in range(len(Idents))])
-sta_if = network.WLAN(network.STA_IF)
-client = MQTTClient(b"esp32_01"+ilot+chariot,b'10.3.141.1',port=1883)
- 
-
-TOPIC_OFF = ilot+"/off"
-TOPIC_BLINK = ilot+"/blink"
-
+# make the LEDs blink 1 time
 def blink_active_leds():
     on = (0,0,0,100)
     off = (0,0,0,0)
@@ -44,6 +49,7 @@ def blink_active_leds():
         utime.sleep_ms(500)
         Leds.write()
 
+# mqtt callback
 def sub_cb(topic,payload,Leds,nbleds):
     on = (0,0,0,100)
     off = (0,0,0,0)
@@ -62,6 +68,7 @@ def sub_cb(topic,payload,Leds,nbleds):
     utime.sleep_ms(100)
     Leds.write()
 
+# initialize mqtt subscriptions
 def init_mqtt(client,Idents,ilot):
     print("connect mqtt...")
     res = client.connect()
@@ -73,6 +80,7 @@ def init_mqtt(client,Idents,ilot):
             client.subscribe(_nom)
         client.set_callback(sub_cb)
 
+# make the first LED blink
 def infoleds():
     utime.sleep_ms(500)
     Leds[0] = (100, 0, 0, 0)
@@ -82,6 +90,7 @@ def infoleds():
     Leds[0] = (0, 0, 0, 0)
     Leds.write()
 
+# connect to Wifi
 def connection(sta_if, Leds):
     sta_if.active(True)
     while 1:
@@ -107,7 +116,7 @@ def connection(sta_if, Leds):
                 print(".")
             print("Ready: ", sta_if.ifconfig())
             break
-    
+
 blink_active_leds()
 connection(sta_if,Leds)
 init_mqtt(client, Idents,ilot)
