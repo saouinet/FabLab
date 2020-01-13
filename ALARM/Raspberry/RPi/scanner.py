@@ -8,12 +8,12 @@ import paho.mqtt.client as mqtt
 client = mqtt.Client()
 client.connect("localhost", 1883)
 FINDOF = "fin d'of"
-ILOT="ELEMENT"
+client.loop_start()
 
 def getDevice():
     devices = [evdev.InputDevice(path) for path in evdev.list_devices()]
     for d in devices:
-        #print(d)
+        print(d)
         if "Scanner" in d.name:
             return d
             break
@@ -37,16 +37,14 @@ async def helper(dev):
             data = evdev.categorize(ev)
             if data.keystate ==1 and data.scancode != 42 :
                 if data.scancode == 28:
-                    if len(scanvalue) > 18 :
-                        id = str(scanvalue)[12:18]
-                        client.publish(topic="scanner/id", payload=id, qos=0, retain=False)
-                        
-                    else:
-                        client.publish(topic="scanner/scan", payload=scanvalue, qos=0, retain=False)
+                    if scanvalue == "fin d4of":
+                        scanvalue = FINDOF
+                    client.publish(topic="scanner/scan", payload="{}".format(scanvalue), qos=0, retain=False)
                     scanvalue = ""
                 else:
                     #print(scancodes[data.scancode])
                     scanvalue = scanvalue+scancodes[data.scancode]
+    print("fin du scan")
 
 loop = asyncio.get_event_loop()
 
@@ -54,3 +52,4 @@ if __name__ == "__main__":
     device = evdev.InputDevice(getDevice().path)
     if device != None :
         loop.run_until_complete(helper(device))
+    client.loop_stop()

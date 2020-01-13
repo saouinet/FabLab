@@ -1,0 +1,1849 @@
+-- Logs begin at Thu 2016-11-03 18:16:42 CET, end at Sun 2019-12-01 10:17:01 CET. --
+nov. 03 18:16:42 raspberrypi kernel: Booting Linux on physical CPU 0x0
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mLinux version 4.19.81-v7+ (dom@buildbot) (gcc version 4.9.3 (crosstool-NG crosstool-ng-1.22.0-88-g8460611)) #1276 SMP Fri Nov 1 14:13:14 GMT 2019[0m
+nov. 03 18:16:42 raspberrypi kernel: CPU: ARMv7 Processor [410fd034] revision 4 (ARMv7), cr=10c5383d
+nov. 03 18:16:42 raspberrypi kernel: CPU: div instructions available: patching division code
+nov. 03 18:16:42 raspberrypi kernel: CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+nov. 03 18:16:42 raspberrypi kernel: OF: fdt: Machine model: Raspberry Pi 3 Model B Plus Rev 1.3
+nov. 03 18:16:42 raspberrypi kernel: Memory policy: Data cache writealloc
+nov. 03 18:16:42 raspberrypi kernel: cma: Reserved 8 MiB at 0x3ac00000
+nov. 03 18:16:42 raspberrypi kernel: On node 0 totalpages: 242688
+nov. 03 18:16:42 raspberrypi kernel:   Normal zone: 2133 pages used for memmap
+nov. 03 18:16:42 raspberrypi kernel:   Normal zone: 0 pages reserved
+nov. 03 18:16:42 raspberrypi kernel:   Normal zone: 242688 pages, LIFO batch:63
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mrandom: get_random_bytes called from start_kernel+0xac/0x4b4 with crng_init=0[0m
+nov. 03 18:16:42 raspberrypi kernel: percpu: Embedded 16 pages/cpu s36864 r8192 d20480 u65536
+nov. 03 18:16:42 raspberrypi kernel: pcpu-alloc: s36864 r8192 d20480 u65536 alloc=16*4096
+nov. 03 18:16:42 raspberrypi kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+nov. 03 18:16:42 raspberrypi kernel: Built 1 zonelists, mobility grouping on.  Total pages: 240555
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mKernel command line: coherent_pool=1M 8250.nr_uarts=0 bcm2708_fb.fbwidth=1600 bcm2708_fb.fbheight=1200 bcm2708_fb.fbswap=1 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  dwc_otg.lpm_enable=0 console=ttyS0,115200 console=tty1 root=/dev/mmcblk0p7 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait splash plymouth.ignore-serial-consoles quiet[0m
+nov. 03 18:16:42 raspberrypi kernel: Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+nov. 03 18:16:42 raspberrypi kernel: Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+nov. 03 18:16:42 raspberrypi kernel: Memory: 939080K/970752K available (8192K kernel code, 653K rwdata, 2224K rodata, 1024K init, 822K bss, 23480K reserved, 8192K cma-reserved)
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mVirtual kernel memory layout:[0m
+                                     [0;1;39m    vector  : 0xffff0000 - 0xffff1000   (   4 kB)[0m
+                                     [0;1;39m    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)[0m
+                                     [0;1;39m    vmalloc : 0xbb800000 - 0xff800000   (1088 MB)[0m
+                                     [0;1;39m    lowmem  : 0x80000000 - 0xbb400000   ( 948 MB)[0m
+                                     [0;1;39m    modules : 0x7f000000 - 0x80000000   (  16 MB)[0m
+                                     [0;1;39m      .text : 0x(ptrval) - 0x(ptrval)   (9184 kB)[0m
+                                     [0;1;39m      .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)[0m
+                                     [0;1;39m      .data : 0x(ptrval) - 0x(ptrval)   ( 654 kB)[0m
+                                     [0;1;39m       .bss : 0x(ptrval) - 0x(ptrval)   ( 823 kB)[0m
+nov. 03 18:16:42 raspberrypi kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+nov. 03 18:16:42 raspberrypi kernel: ftrace: allocating 26846 entries in 79 pages
+nov. 03 18:16:42 raspberrypi kernel: rcu: Hierarchical RCU implementation.
+nov. 03 18:16:42 raspberrypi kernel: NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+nov. 03 18:16:42 raspberrypi kernel: arch_timer: cp15 timer(s) running at 19.20MHz (phys).
+nov. 03 18:16:42 raspberrypi kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+nov. 03 18:16:42 raspberrypi kernel: sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+nov. 03 18:16:42 raspberrypi kernel: Switching to timer-based delay loop, resolution 52ns
+nov. 03 18:16:42 raspberrypi kernel: Console: colour dummy device 80x30
+nov. 03 18:16:42 raspberrypi kernel: console [tty1] enabled
+nov. 03 18:16:42 raspberrypi kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+nov. 03 18:16:42 raspberrypi kernel: pid_max: default: 32768 minimum: 301
+nov. 03 18:16:42 raspberrypi kernel: Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+nov. 03 18:16:42 raspberrypi kernel: Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+nov. 03 18:16:42 raspberrypi kernel: CPU: Testing write buffer coherency: ok
+nov. 03 18:16:42 raspberrypi kernel: CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+nov. 03 18:16:42 raspberrypi kernel: Setting up static identity map for 0x100000 - 0x10003c
+nov. 03 18:16:42 raspberrypi kernel: rcu: Hierarchical SRCU implementation.
+nov. 03 18:16:42 raspberrypi kernel: smp: Bringing up secondary CPUs ...
+nov. 03 18:16:42 raspberrypi kernel: CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+nov. 03 18:16:42 raspberrypi kernel: CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+nov. 03 18:16:42 raspberrypi kernel: CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+nov. 03 18:16:42 raspberrypi kernel: smp: Brought up 1 node, 4 CPUs
+nov. 03 18:16:42 raspberrypi kernel: SMP: Total of 4 processors activated (153.60 BogoMIPS).
+nov. 03 18:16:42 raspberrypi kernel: CPU: All CPU(s) started in HYP mode.
+nov. 03 18:16:42 raspberrypi kernel: CPU: Virtualization extensions available.
+nov. 03 18:16:42 raspberrypi kernel: devtmpfs: initialized
+nov. 03 18:16:42 raspberrypi kernel: VFP support v0.3: implementor 41 architecture 3 part 40 variant 3 rev 4
+nov. 03 18:16:42 raspberrypi kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+nov. 03 18:16:42 raspberrypi kernel: futex hash table entries: 1024 (order: 4, 65536 bytes)
+nov. 03 18:16:42 raspberrypi kernel: pinctrl core: initialized pinctrl subsystem
+nov. 03 18:16:42 raspberrypi kernel: NET: Registered protocol family 16
+nov. 03 18:16:42 raspberrypi kernel: DMA: preallocated 1024 KiB pool for atomic coherent allocations
+nov. 03 18:16:42 raspberrypi kernel: hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+nov. 03 18:16:42 raspberrypi kernel: hw-breakpoint: maximum watchpoint size is 8 bytes.
+nov. 03 18:16:42 raspberrypi kernel: Serial: AMBA PL011 UART driver
+nov. 03 18:16:42 raspberrypi kernel: bcm2835-mbox 3f00b880.mailbox: mailbox enabled
+nov. 03 18:16:42 raspberrypi kernel: bcm2835-dma 3f007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mSCSI subsystem initialized[0m
+nov. 03 18:16:42 raspberrypi kernel: usbcore: registered new interface driver usbfs
+nov. 03 18:16:42 raspberrypi kernel: usbcore: registered new interface driver hub
+nov. 03 18:16:42 raspberrypi kernel: usbcore: registered new device driver usb
+nov. 03 18:16:42 raspberrypi kernel: raspberrypi-firmware soc:firmware: Attached to firmware from 2019-11-01 14:46, variant start
+nov. 03 18:16:42 raspberrypi kernel: raspberrypi-firmware soc:firmware: Firmware hash is 4955a975fa196c323bd72801881d5d4992f0cbbb
+nov. 03 18:16:42 raspberrypi kernel: clocksource: Switched to clocksource arch_sys_counter
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mVFS: Disk quotas dquot_6.6.0[0m
+nov. 03 18:16:42 raspberrypi kernel: VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mFS-Cache: Loaded[0m
+nov. 03 18:16:42 raspberrypi kernel: CacheFiles: Loaded
+nov. 03 18:16:42 raspberrypi kernel: NET: Registered protocol family 2
+nov. 03 18:16:42 raspberrypi kernel: tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+nov. 03 18:16:42 raspberrypi kernel: TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+nov. 03 18:16:42 raspberrypi kernel: TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+nov. 03 18:16:42 raspberrypi kernel: TCP: Hash tables configured (established 8192 bind 8192)
+nov. 03 18:16:42 raspberrypi kernel: UDP hash table entries: 512 (order: 2, 16384 bytes)
+nov. 03 18:16:42 raspberrypi kernel: UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+nov. 03 18:16:42 raspberrypi kernel: NET: Registered protocol family 1
+nov. 03 18:16:42 raspberrypi kernel: RPC: Registered named UNIX socket transport module.
+nov. 03 18:16:42 raspberrypi kernel: RPC: Registered udp transport module.
+nov. 03 18:16:42 raspberrypi kernel: RPC: Registered tcp transport module.
+nov. 03 18:16:42 raspberrypi kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+nov. 03 18:16:42 raspberrypi kernel: hw perfevents: enabled with armv7_cortex_a7 PMU driver, 7 counters available
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mInitialise system trusted keyrings[0m
+nov. 03 18:16:42 raspberrypi kernel: workingset: timestamp_bits=14 max_order=18 bucket_order=4
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mFS-Cache: Netfs 'nfs' registered for caching[0m
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mNFS: Registering the id_resolver key type[0m
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mKey type id_resolver registered[0m
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mKey type id_legacy registered[0m
+nov. 03 18:16:42 raspberrypi kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mKey type asymmetric registered[0m
+nov. 03 18:16:42 raspberrypi kernel: [0;1;39mAsymmetric key parser 'x509' registered[0m
+nov. 03 18:16:42 raspberrypi kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+nov. 03 18:16:42 raspberrypi kernel: io scheduler noop registered
+nov. 03 18:16:42 raspberrypi kernel: io scheduler deadline registered (default)
+nov. 03 18:16:42 raspberrypi kernel: io scheduler cfq registered
+nov. 03 18:16:42 raspberrypi kernel: io scheduler mq-deadline registered (default)
+nov. 03 18:16:42 raspberrypi kernel: io scheduler kyber registered
+nov. 03 18:16:42 raspberrypi kernel: bcm2708_fb soc:fb: FB found 1 display(s)
+nov. 03 18:16:42 raspberrypi kernel: Console: switching to colour frame buffer device 200x75
+nov. 03 18:16:42 raspberrypi kernel: bcm2708_fb soc:fb: Registered framebuffer for display 0, size 1600x1200
+nov. 03 18:16:42 raspberrypi kernel: bcm2835-rng 3f104000.rng: hwrng registered
+nov. 03 18:16:42 raspberrypi kernel: vc-mem: phys_addr:0x00000000 mem_base=0x3ec00000 mem_size:0x40000000(1024 MiB)
+nov. 03 18:16:42 raspberrypi kernel: vc-sm: Videocore shared memory driver
+nov. 30 14:35:33 raspberrypi kernel: gpiomem-bcm2835 3f200000.gpiomem: Initialised: Registers at 0x3f200000
+nov. 30 14:35:33 raspberrypi kernel: brd: module loaded
+nov. 30 14:35:33 raspberrypi kernel: loop: module loaded
+nov. 30 14:35:33 raspberrypi kernel: Loading iSCSI transport class v2.0-870.
+nov. 30 14:35:33 raspberrypi kernel: libphy: Fixed MDIO Bus: probed
+nov. 30 14:35:33 raspberrypi kernel: usbcore: registered new interface driver lan78xx
+nov. 30 14:35:33 raspberrypi kernel: usbcore: registered new interface driver smsc95xx
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg 3f980000.usb: base=(ptrval)
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mCore Release: 2.80a[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mSetting default values for core params[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mFinished setting default values for core params[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mUsing Buffer DMA mode[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mPeriodic Transfer Interrupt Enhancement - disabled[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mMultiprocessor Interrupt Enhancement - disabled[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mOTG VER PARAM: 0, OTG VER FLAG: 0[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mDedicated Tx FIFOs mode[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mWARN::dwc_otg_hcd_init:1045: FIQ DMA bounce buffers: virt = bad14000 dma = 0xfad14000 len=9024[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mFIQ FSM acceleration enabled for :[0m
+                                     [0;1;39mNon-periodic Split Transactions[0m
+                                     [0;1;39mPeriodic Split Transactions[0m
+                                     [0;1;39mHigh-Speed Isochronous Endpoints[0m
+                                     [0;1;39mInterrupt/Control Split Transaction hack enabled[0m
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg: Microframe scheduler enabled
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mWARN::hcd_init_fiq:457: FIQ on core 1[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mWARN::hcd_init_fiq:458: FIQ ASM at 8067e234 length 36[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mWARN::hcd_init_fiq:497: MPHI regs_base at bb810000[0m
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg 3f980000.usb: DWC OTG Controller
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg 3f980000.usb: new USB bus registered, assigned bus number 1
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg 3f980000.usb: irq 56, io mem 0x00000000
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mInit: Port Power? op_state=1[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mInit: Power Port (0)[0m
+nov. 30 14:35:33 raspberrypi kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+nov. 30 14:35:33 raspberrypi kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+nov. 30 14:35:33 raspberrypi kernel: usb usb1: Product: DWC OTG Controller
+nov. 30 14:35:33 raspberrypi kernel: usb usb1: Manufacturer: Linux 4.19.81-v7+ dwc_otg_hcd
+nov. 30 14:35:33 raspberrypi kernel: usb usb1: SerialNumber: 3f980000.usb
+nov. 30 14:35:33 raspberrypi kernel: hub 1-0:1.0: USB hub found
+nov. 30 14:35:33 raspberrypi kernel: hub 1-0:1.0: 1 port detected
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg: FIQ enabled
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg: NAK holdoff enabled
+nov. 30 14:35:33 raspberrypi kernel: dwc_otg: FIQ split-transaction FSM enabled
+nov. 30 14:35:33 raspberrypi kernel: Module dwc_common_port init
+nov. 30 14:35:33 raspberrypi kernel: usbcore: registered new interface driver usb-storage
+nov. 30 14:35:33 raspberrypi kernel: mousedev: PS/2 mouse device common for all mice
+nov. 30 14:35:33 raspberrypi kernel: bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+nov. 30 14:35:33 raspberrypi kernel: bcm2835-cpufreq: min=600000 max=1400000
+nov. 30 14:35:33 raspberrypi kernel: sdhci: Secure Digital Host Controller Interface driver
+nov. 30 14:35:33 raspberrypi kernel: sdhci: Copyright(c) Pierre Ossman
+nov. 30 14:35:33 raspberrypi kernel: mmc-bcm2835 3f300000.mmcnr: could not get clk, deferring probe
+nov. 30 14:35:33 raspberrypi kernel: sdhost-bcm2835 3f202000.mmc: could not get clk, deferring probe
+nov. 30 14:35:33 raspberrypi kernel: sdhci-pltfm: SDHCI platform and OF driver helper
+nov. 30 14:35:33 raspberrypi kernel: ledtrig-cpu: registered to indicate activity on CPUs
+nov. 30 14:35:33 raspberrypi kernel: hidraw: raw HID events driver (C) Jiri Kosina
+nov. 30 14:35:33 raspberrypi kernel: usbcore: registered new interface driver usbhid
+nov. 30 14:35:33 raspberrypi kernel: usbhid: USB HID core driver
+nov. 30 14:35:33 raspberrypi kernel: vchiq: vchiq_init_state: slot_zero = (ptrval), is_master = 0
+nov. 30 14:35:33 raspberrypi kernel: [vc_sm_connected_init]: start
+nov. 30 14:35:33 raspberrypi kernel: [vc_sm_connected_init]: end - returning 0
+nov. 30 14:35:33 raspberrypi kernel: Initializing XFRM netlink socket
+nov. 30 14:35:33 raspberrypi kernel: NET: Registered protocol family 17
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mKey type dns_resolver registered[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mRegistering SWP/SWPB emulation handler[0m
+nov. 30 14:35:33 raspberrypi kernel: registered taskstats version 1
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mLoading compiled-in X.509 certificates[0m
+nov. 30 14:35:33 raspberrypi kernel: uart-pl011 3f201000.serial: cts_event_workaround enabled
+nov. 30 14:35:33 raspberrypi kernel: 3f201000.serial: ttyAMA0 at MMIO 0x3f201000 (irq = 81, base_baud = 0) is a PL011 rev2
+nov. 30 14:35:33 raspberrypi kernel: mmc-bcm2835 3f300000.mmcnr: mmc_debug:0 mmc_debug2:0
+nov. 30 14:35:33 raspberrypi kernel: mmc-bcm2835 3f300000.mmcnr: DMA channel allocated
+nov. 30 14:35:33 raspberrypi kernel: sdhost: log_buf @ (ptrval) (fad13000)
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mmmc1: queuing unknown CIS tuple 0x80 (2 bytes)[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mmmc1: queuing unknown CIS tuple 0x80 (3 bytes)[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mmmc1: queuing unknown CIS tuple 0x80 (3 bytes)[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mmmc1: queuing unknown CIS tuple 0x80 (7 bytes)[0m
+nov. 30 14:35:33 raspberrypi kernel: mmc0: sdhost-bcm2835 loaded - DMA enabled (>1)
+nov. 30 14:35:33 raspberrypi kernel: of_cfs_init
+nov. 30 14:35:33 raspberrypi kernel: of_cfs_init: OK
+nov. 30 14:35:33 raspberrypi kernel: Waiting for root device /dev/mmcblk0p7...
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mrandom: fast init done[0m
+nov. 30 14:35:33 raspberrypi kernel: mmc1: new high speed SDIO card at address 0001
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mmmc0: host does not support reading read-only switch, assuming write-enable[0m
+nov. 30 14:35:33 raspberrypi kernel: mmc0: new high speed SDHC card at address aaaa
+nov. 30 14:35:33 raspberrypi kernel: mmcblk0: mmc0:aaaa SC32G 29.7 GiB
+nov. 30 14:35:33 raspberrypi kernel:  mmcblk0: p1 p2 < p5 p6 p7 >
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mIndeed it is in host mode hprt0 = 00021501[0m
+nov. 30 14:35:33 raspberrypi kernel: EXT4-fs (mmcblk0p7): mounted filesystem with ordered data mode. Opts: (null)
+nov. 30 14:35:33 raspberrypi kernel: VFS: Mounted root (ext4 filesystem) readonly on device 179:7.
+nov. 30 14:35:33 raspberrypi kernel: devtmpfs: mounted
+nov. 30 14:35:33 raspberrypi kernel: Freeing unused kernel memory: 1024K
+nov. 30 14:35:33 raspberrypi kernel: Run /sbin/init as init process
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1: new high-speed USB device number 2 using dwc_otg
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mIndeed it is in host mode hprt0 = 00001101[0m
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1: New USB device found, idVendor=0424, idProduct=2514, bcdDevice= b.b3
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+nov. 30 14:35:33 raspberrypi kernel: hub 1-1:1.0: USB hub found
+nov. 30 14:35:33 raspberrypi kernel: hub 1-1:1.0: 4 ports detected
+nov. 30 14:35:33 raspberrypi systemd[1]: System time before build time, advancing clock.
+nov. 30 14:35:33 raspberrypi kernel: NET: Registered protocol family 10
+nov. 30 14:35:33 raspberrypi kernel: Segment Routing with IPv6
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mrandom: systemd: uninitialized urandom read (16 bytes read)[0m
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mrandom: systemd: uninitialized urandom read (16 bytes read)[0m
+nov. 30 14:35:33 raspberrypi systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+nov. 30 14:35:33 raspberrypi systemd[1]: Detected architecture arm.
+nov. 30 14:35:33 raspberrypi systemd[1]: Set hostname to <raspberrypi>.
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mrandom: systemd-cryptse: uninitialized urandom read (16 bytes read)[0m
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1: New USB device found, idVendor=0424, idProduct=2514, bcdDevice= b.b3
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+nov. 30 14:35:33 raspberrypi kernel: hub 1-1.1:1.0: USB hub found
+nov. 30 14:35:33 raspberrypi kernel: hub 1-1.1:1.0: 3 ports detected
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.2: new low-speed USB device number 4 using dwc_otg
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.2: New USB device found, idVendor=0461, idProduct=0010, bcdDevice= 1.04
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.2: Product: USB Keyboard
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.2: Manufacturer: NOVATEK
+nov. 30 14:35:33 raspberrypi kernel: input: NOVATEK USB Keyboard as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:0461:0010.0001/input/input0
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.2: new low-speed USB device number 5 using dwc_otg
+nov. 30 14:35:33 raspberrypi kernel: hid-generic 0003:0461:0010.0001: input,hidraw0: USB HID v1.10 Keyboard [NOVATEK USB Keyboard] on usb-3f980000.usb-1.2/input0
+nov. 30 14:35:33 raspberrypi systemd[1]: [0;1;39mConfiguration file /etc/systemd/scanner.service is marked world-writable. Please remove world writability permission bits. Proceeding anyway.[0m
+nov. 30 14:35:33 raspberrypi kernel: input: NOVATEK USB Keyboard System Control as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2/1-1.2:1.1/0003:0461:0010.0002/input/input1
+nov. 30 14:35:33 raspberrypi systemd[1]: Listening on Syslog Socket.
+nov. 30 14:35:33 raspberrypi systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+nov. 30 14:35:33 raspberrypi systemd[1]: Reached target Swap.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+nov. 30 14:35:33 raspberrypi systemd[1]: Listening on udev Kernel Socket.
+nov. 30 14:35:33 raspberrypi systemd[1]: Listening on udev Control Socket.
+nov. 30 14:35:33 raspberrypi kernel: input: NOVATEK USB Keyboard Consumer Control as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2/1-1.2:1.1/0003:0461:0010.0002/input/input2
+nov. 30 14:35:33 raspberrypi kernel: hid-generic 0003:0461:0010.0002: input,hidraw1: USB HID v1.10 Device [NOVATEK USB Keyboard] on usb-3f980000.usb-1.2/input1
+nov. 30 14:35:33 raspberrypi kernel: i2c /dev entries driver
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.2: New USB device found, idVendor=03f0, idProduct=154a, bcdDevice= 1.00
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.2: Product: HP USB 1000dpi Laser Mouse
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.2: Manufacturer: HP
+nov. 30 14:35:33 raspberrypi kernel: input: HP HP USB 1000dpi Laser Mouse as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.2/1-1.1.2:1.0/0003:03F0:154A.0003/input/input3
+nov. 30 14:35:33 raspberrypi kernel: hid-generic 0003:03F0:154A.0003: input,hidraw2: USB HID v1.00 Mouse [HP HP USB 1000dpi Laser Mouse] on usb-3f980000.usb-1.1.2/input0
+nov. 30 14:35:33 raspberrypi systemd-journald[103]: Journal started
+-- Subject: Le journal a été démarré
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Le processus du journal système a démarré, ouvert ses fichiers en écriture
+-- et est prêt à traiter les requêtes.
+nov. 30 14:35:33 raspberrypi systemd-journald[103]: Runtime journal (/run/log/journal/7f64f39a1a7e428bbb00b4403b37e2fd) is 11.5M, max 46.3M, 34.7M free.
+-- Subject: Espace disque utilisé par le journal
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: man:journald.conf(5)
+-- 
+-- Runtime journal (/run/log/journal/7f64f39a1a7e428bbb00b4403b37e2fd) utilise actuellement 11.5M.
+-- Le maximum autorisé est défini à 46.3M.
+-- Au moins 69.4M doivent être laissés libres
+-- (sur 451.4M d'espace disque actuellement libre).
+-- La limite appliquée est donc 46.3M, dont 34.7M
+-- sont toujours disponibles.
+-- 
+-- Les limites définissant la quantité d'espace disque que peut utiliser le
+-- journal peuvent être configurées avec les paramètres SystemMaxUse=,
+-- SystemKeepFree=, SystemMaxFileSize=, RuntimeMaxUse=, RuntimeKeepFree=,
+-- RuntimeMaxFileSize= dans le fichier /etc/systemd/journald.conf.
+-- Voir journald.conf(5) pour plus de détails.
+nov. 30 14:35:33 raspberrypi systemd-modules-load[94]: Inserted module 'i2c_dev'
+nov. 30 14:35:33 raspberrypi fake-hwclock[99]: samedi 30 novembre 2019, 13:35:33 (UTC+0000)
+nov. 30 14:35:33 raspberrypi systemd-fsck[127]: e2fsck 1.43.4 (31-Jan-2017)
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Create Static Device Nodes in /dev.
+-- Subject: L'unité (unit) systemd-tmpfiles-setup-dev.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-setup-dev.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting udev Kernel Device Manager...
+-- Subject: L'unité (unit) systemd-udevd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-udevd.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.1: new high-speed USB device number 6 using dwc_otg
+nov. 30 14:35:33 raspberrypi systemd-fsck[127]: root : propre, 185726/1830384 fichiers, 1663759/7307264 blocs
+nov. 30 14:35:33 raspberrypi systemd[1]: Started File System Check on Root Device.
+-- Subject: L'unité (unit) systemd-fsck-root.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-fsck-root.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting Remount Root and Kernel File Systems...
+-- Subject: L'unité (unit) systemd-remount-fs.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-remount-fs.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi kernel: EXT4-fs (mmcblk0p7): re-mounted. Opts: (null)
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Remount Root and Kernel File Systems.
+-- Subject: L'unité (unit) systemd-remount-fs.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-remount-fs.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting Flush Journal to Persistent Storage...
+-- Subject: L'unité (unit) systemd-journal-flush.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-journal-flush.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting udev Coldplug all Devices...
+-- Subject: L'unité (unit) systemd-udev-trigger.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-udev-trigger.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting Load/Save Random Seed...
+-- Subject: L'unité (unit) systemd-random-seed.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-random-seed.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.1: New USB device found, idVendor=0424, idProduct=7800, bcdDevice= 3.00
+nov. 30 14:35:33 raspberrypi kernel: usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Load/Save Random Seed.
+-- Subject: L'unité (unit) systemd-random-seed.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-random-seed.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd-journald[103]: Runtime journal (/run/log/journal/7f64f39a1a7e428bbb00b4403b37e2fd) is 11.5M, max 46.3M, 34.7M free.
+-- Subject: Espace disque utilisé par le journal
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: man:journald.conf(5)
+-- 
+-- Runtime journal (/run/log/journal/7f64f39a1a7e428bbb00b4403b37e2fd) utilise actuellement 11.5M.
+-- Le maximum autorisé est défini à 46.3M.
+-- Au moins 69.4M doivent être laissés libres
+-- (sur 451.4M d'espace disque actuellement libre).
+-- La limite appliquée est donc 46.3M, dont 34.7M
+-- sont toujours disponibles.
+-- 
+-- Les limites définissant la quantité d'espace disque que peut utiliser le
+-- journal peuvent être configurées avec les paramètres SystemMaxUse=,
+-- SystemKeepFree=, SystemMaxFileSize=, RuntimeMaxUse=, RuntimeKeepFree=,
+-- RuntimeMaxFileSize= dans le fichier /etc/systemd/journald.conf.
+-- Voir journald.conf(5) pour plus de détails.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started udev Kernel Device Manager.
+-- Subject: L'unité (unit) systemd-udevd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-udevd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Flush Journal to Persistent Storage.
+-- Subject: L'unité (unit) systemd-journal-flush.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-journal-flush.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Set the console keyboard layout.
+-- Subject: L'unité (unit) keyboard-setup.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) keyboard-setup.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Reached target Local File Systems (Pre).
+-- Subject: L'unité (unit) local-fs-pre.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) local-fs-pre.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi kernel: lan78xx 1-1.1.1:1.0 (unnamed net_device) (uninitialized): No External EEPROM. Setting MAC Speed
+nov. 30 14:35:33 raspberrypi kernel: libphy: lan78xx-mdiobus: probed
+nov. 30 14:35:33 raspberrypi kernel: [0;1;39mlan78xx 1-1.1.1:1.0 (unnamed net_device) (uninitialized): int urb period 64[0m
+nov. 30 14:35:33 raspberrypi mtp-probe[164]: checking bus 1, device 6: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.1"
+nov. 30 14:35:33 raspberrypi mtp-probe[162]: checking bus 1, device 5: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.2"
+nov. 30 14:35:33 raspberrypi mtp-probe[164]: bus: 1, device: 6 was not an MTP device
+nov. 30 14:35:33 raspberrypi mtp-probe[162]: bus: 1, device: 5 was not an MTP device
+nov. 30 14:35:33 raspberrypi systemd[1]: Started udev Coldplug all Devices.
+-- Subject: L'unité (unit) systemd-udev-trigger.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-udev-trigger.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Starting Show Plymouth Boot Screen...
+-- Subject: L'unité (unit) plymouth-start.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-start.service a commencé à démarrer.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Show Plymouth Boot Screen.
+-- Subject: L'unité (unit) plymouth-start.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-start.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Reached target Paths.
+-- Subject: L'unité (unit) paths.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) paths.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Reached target Encrypted Volumes.
+-- Subject: L'unité (unit) cryptsetup.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) cryptsetup.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:33 raspberrypi systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+-- Subject: L'unité (unit) systemd-ask-password-plymouth.path a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-ask-password-plymouth.path a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:34 raspberrypi systemd-udevd[152]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:34 raspberrypi systemd-udevd[147]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:34 raspberrypi systemd-udevd[159]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:34 raspberrypi systemd-udevd[166]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:34 raspberrypi systemd-udevd[172]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mvc_sm_cma: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi kernel: bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+nov. 30 14:35:34 raspberrypi kernel: [vc_sm_connected_init]: start
+nov. 30 14:35:34 raspberrypi kernel: [vc_sm_connected_init]: installed successfully
+nov. 30 14:35:34 raspberrypi kernel: media: Linux media interface: v0.10
+nov. 30 14:35:34 raspberrypi kernel: videodev: Linux video capture interface: v2.00
+nov. 30 14:35:34 raspberrypi systemd[1]: Found device /dev/serial1.
+-- Subject: L'unité (unit) dev-serial1.device a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dev-serial1.device a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mbcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mbcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39msnd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi mtp-probe[217]: checking bus 1, device 5: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.2"
+nov. 30 14:35:34 raspberrypi mtp-probe[219]: checking bus 1, device 4: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.2"
+nov. 30 14:35:34 raspberrypi mtp-probe[217]: bus: 1, device: 5 was not an MTP device
+nov. 30 14:35:34 raspberrypi mtp-probe[219]: bus: 1, device: 4 was not an MTP device
+nov. 30 14:35:34 raspberrypi kernel: bcm2835_audio soc:audio: card created with 8 channels
+nov. 30 14:35:34 raspberrypi mtp-probe[221]: checking bus 1, device 6: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.1/1-1.1.1"
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mbcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi mtp-probe[221]: bus: 1, device: 6 was not an MTP device
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mbcm2835_codec: module is from the staging directory, the quality is unknown, you have been warned.[0m
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mcfg80211: Loading compiled-in X.509 certificates for regulatory database[0m
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video10
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 decode
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video11
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 encode
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video12
+nov. 30 14:35:34 raspberrypi kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 isp
+nov. 30 14:35:34 raspberrypi kernel: [0;1;39mcfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'[0m
+nov. 30 14:35:34 raspberrypi systemd[1]: Found device /dev/mmcblk0p6.
+-- Subject: L'unité (unit) dev-mmcblk0p6.device a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dev-mmcblk0p6.device a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:34 raspberrypi systemd[1]: Starting File System Check on /dev/mmcblk0p6...
+-- Subject: L'unité (unit) systemd-fsck@dev-mmcblk0p6.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-fsck@dev-mmcblk0p6.service a commencé à démarrer.
+nov. 30 14:35:34 raspberrypi systemd[1]: Reached target Sound Card.
+-- Subject: L'unité (unit) sound.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) sound.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:34 raspberrypi systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+-- Subject: L'unité (unit) systemd-rfkill.socket a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-rfkill.socket a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:34 raspberrypi kernel: brcmfmac: F1 signature read @0x18000000=0x15264345
+nov. 30 14:35:34 raspberrypi kernel: [0;1;31mbrcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6[0m
+nov. 30 14:35:34 raspberrypi kernel: usbcore: registered new interface driver brcmfmac
+nov. 30 14:35:35 raspberrypi systemd-udevd[166]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:35 raspberrypi kernel: [0;1;39mrandom: crng init done[0m
+nov. 30 14:35:35 raspberrypi kernel: [0;1;39mrandom: 7 urandom warning(s) missed due to ratelimiting[0m
+nov. 30 14:35:35 raspberrypi kernel: [0;1;31mbrcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6[0m
+nov. 30 14:35:35 raspberrypi kernel: [0;1;31mbrcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Feb 27 2018 03:15:32 version 7.45.154 (r684107 CY) FWID 01-4fbe0b04[0m
+nov. 30 14:35:35 raspberrypi systemd-fsck[257]: fsck.fat 4.1 (2017-01-24)
+nov. 30 14:35:35 raspberrypi systemd-fsck[257]: /dev/mmcblk0p6: 218 files, 46311/139106 clusters
+nov. 30 14:35:35 raspberrypi systemd[1]: Started File System Check on /dev/mmcblk0p6.
+-- Subject: L'unité (unit) systemd-fsck@dev-mmcblk0p6.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-fsck@dev-mmcblk0p6.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Mounting /boot...
+-- Subject: L'unité (unit) boot.mount a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) boot.mount a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Mounted /boot.
+-- Subject: L'unité (unit) boot.mount a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) boot.mount a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Reached target Local File Systems.
+-- Subject: L'unité (unit) local-fs.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) local-fs.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+-- Subject: L'unité (unit) plymouth-read-write.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-read-write.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Preprocess NFS configuration...
+-- Subject: L'unité (unit) nfs-config.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) nfs-config.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Set console font and keymap...
+-- Subject: L'unité (unit) console-setup.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) console-setup.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Create Volatile Files and Directories...
+-- Subject: L'unité (unit) systemd-tmpfiles-setup.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-setup.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Raise network interfaces...
+-- Subject: L'unité (unit) networking.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) networking.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Started Preprocess NFS configuration.
+-- Subject: L'unité (unit) nfs-config.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) nfs-config.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Reached target NFS client services.
+-- Subject: L'unité (unit) nfs-client.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) nfs-client.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Reached target Remote File Systems (Pre).
+-- Subject: L'unité (unit) remote-fs-pre.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) remote-fs-pre.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Reached target Remote File Systems.
+-- Subject: L'unité (unit) remote-fs.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) remote-fs.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Started Set console font and keymap.
+-- Subject: L'unité (unit) console-setup.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) console-setup.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Started Create Volatile Files and Directories.
+-- Subject: L'unité (unit) systemd-tmpfiles-setup.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-setup.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Network Time Synchronization...
+-- Subject: L'unité (unit) systemd-timesyncd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-timesyncd.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+-- Subject: L'unité (unit) systemd-update-utmp.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-update-utmp.service a commencé à démarrer.
+nov. 30 14:35:35 raspberrypi systemd[1]: Started Update UTMP about System Boot/Shutdown.
+-- Subject: L'unité (unit) systemd-update-utmp.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-update-utmp.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Started Network Time Synchronization.
+-- Subject: L'unité (unit) systemd-timesyncd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-timesyncd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:35 raspberrypi systemd[1]: Reached target System Time Synchronized.
+-- Subject: L'unité (unit) time-sync.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) time-sync.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:36 raspberrypi systemd[1]: Received SIGRTMIN+20 from PID 174 (plymouthd).
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: new full-speed USB device number 7 using dwc_otg
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: New USB device found, idVendor=05f9, idProduct=220d, bcdDevice= 0.79
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: Product: Handheld Barcode Scanner
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: Manufacturer: Datalogic ADC, Inc.
+nov. 30 14:35:37 raspberrypi kernel: usb 1-1.3: SerialNumber: S/N E16N33150
+nov. 30 14:35:37 raspberrypi kernel: input: Datalogic ADC, Inc. Handheld Barcode Scanner as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:05F9:220D.0004/input/input4
+nov. 30 14:35:37 raspberrypi kernel: hid-generic 0003:05F9:220D.0004: input,hidraw3: USB HID v1.10 Keyboard [Datalogic ADC, Inc. Handheld Barcode Scanner] on usb-3f980000.usb-1.3/input0
+nov. 30 14:35:37 raspberrypi mtp-probe[328]: checking bus 1, device 7: "/sys/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.3"
+nov. 30 14:35:37 raspberrypi mtp-probe[328]: bus: 1, device: 7 was not an MTP device
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Tell Plymouth To Write Out Runtime Data.
+-- Subject: L'unité (unit) plymouth-read-write.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-read-write.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Reached target System Initialization.
+-- Subject: L'unité (unit) sysinit.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) sysinit.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: apt-daily.timer: Adding 23min 28.415190s random time.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Daily apt download activities.
+-- Subject: L'unité (unit) apt-daily.timer a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily.timer a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: apt-daily-upgrade.timer: Adding 2min 40.641967s random time.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Daily apt upgrade and clean activities.
+-- Subject: L'unité (unit) apt-daily-upgrade.timer a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily-upgrade.timer a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Daily Cleanup of Temporary Directories.
+-- Subject: L'unité (unit) systemd-tmpfiles-clean.timer a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-clean.timer a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Listening on triggerhappy.socket.
+-- Subject: L'unité (unit) triggerhappy.socket a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) triggerhappy.socket a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+-- Subject: L'unité (unit) avahi-daemon.socket a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) avahi-daemon.socket a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Listening on D-Bus System Message Bus Socket.
+-- Subject: L'unité (unit) dbus.socket a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dbus.socket a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Reached target Sockets.
+-- Subject: L'unité (unit) sockets.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) sockets.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Reached target Basic System.
+-- Subject: L'unité (unit) basic.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) basic.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started D-Bus System Message Bus.
+-- Subject: L'unité (unit) dbus.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dbus.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting WPA supplicant...
+-- Subject: L'unité (unit) wpa_supplicant.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) wpa_supplicant.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting LSB: mosquitto MQTT v3.1 message broker...
+-- Subject: L'unité (unit) mosquitto.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) mosquitto.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Regular background program processing daemon.
+-- Subject: L'unité (unit) cron.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) cron.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting dhcpcd on all interfaces...
+-- Subject: L'unité (unit) dhcpcd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting triggerhappy global hotkey daemon...
+-- Subject: L'unité (unit) triggerhappy.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) triggerhappy.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Login Service...
+-- Subject: L'unité (unit) systemd-logind.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-logind.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi cron[351]: (CRON) INFO (pidfile fd = 3)
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting LSB: Switch to ondemand cpu governor (unless shift key is pressed)...
+-- Subject: L'unité (unit) raspi-config.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) raspi-config.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Avahi mDNS/DNS-SD Stack...
+-- Subject: L'unité (unit) avahi-daemon.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) avahi-daemon.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd-udevd[334]: [0;1;39mProcess '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.[0m
+nov. 30 14:35:37 raspberrypi thd[355]: Found socket passed from systemd
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting LSB: Autogenerate and use a swap file...
+-- Subject: L'unité (unit) dphys-swapfile.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dphys-swapfile.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi cron[351]: (CRON) INFO (Running @reboot jobs)
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Disable WiFi if country not set...
+-- Subject: L'unité (unit) wifi-country.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) wifi-country.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Configure Bluetooth Modems connected by UART...
+-- Subject: L'unité (unit) hciuart.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hciuart.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Node-RED graphical event wiring tool.
+-- Subject: L'unité (unit) nodered.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) nodered.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Check for v3d driver...
+-- Subject: L'unité (unit) gldriver-test.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) gldriver-test.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting Save/Restore Sound Card State...
+-- Subject: L'unité (unit) alsa-restore.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) alsa-restore.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Starting System Logging Service...
+-- Subject: L'unité (unit) rsyslog.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) rsyslog.service a commencé à démarrer.
+nov. 30 14:35:37 raspberrypi systemd[1]: Started Clean PHP session files every 30 mins.
+-- Subject: L'unité (unit) phpsessionclean.timer a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.timer a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Reached target Timers.
+-- Subject: L'unité (unit) timers.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) timers.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started triggerhappy global hotkey daemon.
+-- Subject: L'unité (unit) triggerhappy.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) triggerhappy.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Save/Restore Sound Card State.
+-- Subject: L'unité (unit) alsa-restore.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) alsa-restore.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi dhcpcd[353]: dev: loaded udev
+nov. 30 14:35:38 raspberrypi wifi-country[362]: Could not determine WiFi iomem address
+nov. 30 14:35:38 raspberrypi dhcpcd[353]: forked to background, child pid 388
+nov. 30 14:35:38 raspberrypi systemd[1]: Started dhcpcd on all interfaces.
+-- Subject: L'unité (unit) dhcpcd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: [0;1;39mwifi-country.service: Main process exited, code=exited, status=1/FAILURE[0m
+nov. 30 14:35:38 raspberrypi systemd[1]: [0;1;31mFailed to start Disable WiFi if country not set.[0m
+-- Subject: L'unité (unit) wifi-country.service a échoué
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) wifi-country.service a échoué, avec le résultat failed.
+nov. 30 14:35:38 raspberrypi systemd[1]: [0;1;39mwifi-country.service: Unit entered failed state.[0m
+nov. 30 14:35:38 raspberrypi systemd[1]: [0;1;39mwifi-country.service: Failed with result 'exit-code'.[0m
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Found user 'avahi' (UID 108) and group 'avahi' (GID 112).
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Successfully dropped root privileges.
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: avahi-daemon 0.6.32 starting up.
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Successfully called chroot().
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Successfully dropped remaining capabilities.
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: No service file found in /etc/avahi/services.
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Network interface enumeration completed.
+nov. 30 14:35:38 raspberrypi avahi-daemon[358]: Server startup complete. Host name is raspberrypi.local. Local service cookie is 2938288576.
+nov. 30 14:35:38 raspberrypi wpa_supplicant[349]: [0;1;39mSuccessfully initialized wpa_supplicant[0m
+nov. 30 14:35:38 raspberrypi kernel: uart-pl011 3f201000.serial: no DMA platform data
+nov. 30 14:35:38 raspberrypi systemd-logind[356]: New seat seat0.
+-- Subject: Un nouveau poste (seat) seat0 est disponible
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: http://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- Un nouveau poste (seat) seat0 a été configuré et est maintenant
+-- disponible.
+nov. 30 14:35:38 raspberrypi liblogging-stdlog[371]:  [origin software="rsyslogd" swVersion="8.24.0" x-pid="371" x-info="http://www.rsyslog.com"] start
+nov. 30 14:35:38 raspberrypi systemd[1]: Started System Logging Service.
+-- Subject: L'unité (unit) rsyslog.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) rsyslog.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Check for v3d driver.
+-- Subject: L'unité (unit) gldriver-test.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) gldriver-test.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Avahi mDNS/DNS-SD Stack.
+-- Subject: L'unité (unit) avahi-daemon.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) avahi-daemon.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi dphys-swapfile[360]: Starting dphys-swapfile swapfile setup ...
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Raise network interfaces.
+-- Subject: L'unité (unit) networking.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) networking.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started WPA supplicant.
+-- Subject: L'unité (unit) wpa_supplicant.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) wpa_supplicant.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Login Service.
+-- Subject: L'unité (unit) systemd-logind.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-logind.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting Load/Save RF Kill Switch Status...
+-- Subject: L'unité (unit) systemd-rfkill.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-rfkill.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Reached target Network.
+-- Subject: L'unité (unit) network.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) network.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting Permit User Sessions...
+-- Subject: L'unité (unit) systemd-user-sessions.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-user-sessions.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting /etc/rc.local Compatibility...
+-- Subject: L'unité (unit) rc-local.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) rc-local.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting Lighttpd Daemon...
+-- Subject: L'unité (unit) lighttpd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) lighttpd.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+-- Subject: L'unité (unit) dnsmasq.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started vnStat network traffic monitor.
+-- Subject: L'unité (unit) vnstat.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) vnstat.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator...
+-- Subject: L'unité (unit) hostapd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Permit User Sessions.
+-- Subject: L'unité (unit) systemd-user-sessions.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-user-sessions.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Starting Light Display Manager...
+-- Subject: L'unité (unit) lightdm.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) lightdm.service a commencé à démarrer.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Load/Save RF Kill Switch Status.
+-- Subject: L'unité (unit) systemd-rfkill.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-rfkill.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi mosquitto[350]: Starting network daemon:: mosquitto.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started LSB: mosquitto MQTT v3.1 message broker.
+-- Subject: L'unité (unit) mosquitto.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) mosquitto.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi dphys-swapfile[360]: want /var/swap=100MByte, checking existing: keeping it
+nov. 30 14:35:38 raspberrypi dhcpcd-run-hooks[469]: wlan0: starting wpa_supplicant
+nov. 30 14:35:38 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+nov. 30 14:35:38 raspberrypi kernel: brcmfmac: power management disabled
+nov. 30 14:35:38 raspberrypi hostapd[451]: Configuration file: /etc/hostapd/hostapd.conf
+nov. 30 14:35:38 raspberrypi kernel: Adding 102396k swap on /var/swap.  Priority:-2 extents:1 across:102396k SSFS
+nov. 30 14:35:38 raspberrypi dphys-swapfile[360]: done.
+nov. 30 14:35:38 raspberrypi systemd[1]: Started LSB: Autogenerate and use a swap file.
+-- Subject: L'unité (unit) dphys-swapfile.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dphys-swapfile.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:38 raspberrypi hostapd[451]: wlan0: interface state UNINITIALIZED->COUNTRY_UPDATE
+nov. 30 14:35:38 raspberrypi systemd[1]: Started Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator.
+-- Subject: L'unité (unit) hostapd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi systemd[1]: Started /etc/rc.local Compatibility.
+-- Subject: L'unité (unit) rc-local.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) rc-local.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi dnsmasq[448]: dnsmasq: vérification de syntaxe OK.
+nov. 30 14:35:39 raspberrypi systemd[1]: Starting Hold until boot process finishes up...
+-- Subject: L'unité (unit) plymouth-quit-wait.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-quit-wait.service a commencé à démarrer.
+nov. 30 14:35:39 raspberrypi systemd[1]: Starting Terminate Plymouth Boot Screen...
+-- Subject: L'unité (unit) plymouth-quit.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-quit.service a commencé à démarrer.
+nov. 30 14:35:39 raspberrypi systemd[1]: Received SIGRTMIN+21 from PID 174 (plymouthd).
+nov. 30 14:35:39 raspberrypi systemd[1]: Started Hold until boot process finishes up.
+-- Subject: L'unité (unit) plymouth-quit-wait.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-quit-wait.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi systemd[1]: Started Terminate Plymouth Boot Screen.
+-- Subject: L'unité (unit) plymouth-quit.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) plymouth-quit.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi systemd[1]: Started Getty on tty1.
+-- Subject: L'unité (unit) getty@tty1.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) getty@tty1.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi systemd[1]: Reached target Login Prompts.
+-- Subject: L'unité (unit) getty.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) getty.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+nov. 30 14:35:39 raspberrypi lightdm[464]: [0;1;39mError getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files[0m
+nov. 30 14:35:39 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: eth0: waiting for carrier
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: waiting for carrier
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: carrier acquired
+nov. 30 14:35:39 raspberrypi kernel: [0;1;31mlan78xx 1-1.1.1:1.0 eth0: kevent 4 may have been dropped[0m
+nov. 30 14:35:39 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+nov. 30 14:35:39 raspberrypi systemd[1]: Started Light Display Manager.
+-- Subject: L'unité (unit) lightdm.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) lightdm.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: DUID 00:01:00:01:23:7d:9b:29:b8:27:eb:b1:3d:75
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: IAID eb:b1:3d:75
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: adding address fe80::cb63:8ac6:962e:e6a2
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface wlan0.IPv6 with address fe80::cb63:8ac6:962e:e6a2.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: New relevant interface wlan0.IPv6 for mDNS.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Registering new address record for fe80::cb63:8ac6:962e:e6a2 on wlan0.*.
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: probing address 10.3.141.1/24
+nov. 30 14:35:39 raspberrypi dnsmasq[528]: demarré, version 2.76 (taille de cache 150)
+nov. 30 14:35:39 raspberrypi dnsmasq[528]: options à la compilation : IPv6 GNU-getopt DBus i18n IDN DHCP DHCPv6 no-Lua TFTP conntrack ipset auth DNSSEC loop-detect inotify
+nov. 30 14:35:39 raspberrypi dnsmasq-dhcp[528]: DHCP, plage d'adresses IP 10.3.141.50 -- 10.3.141.255, durée de bail 12h
+nov. 30 14:35:39 raspberrypi dnsmasq[528]: lecture /etc/hosts - 5 adresses
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: carrier lost
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: deleting address fe80::cb63:8ac6:962e:e6a2
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Withdrawing address record for fe80::cb63:8ac6:962e:e6a2 on wlan0.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Leaving mDNS multicast group on interface wlan0.IPv6 with address fe80::cb63:8ac6:962e:e6a2.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Interface wlan0.IPv6 no longer relevant for mDNS.
+nov. 30 14:35:39 raspberrypi raspi-config[357]: Checking if shift key is held down: No. Switching to ondemand scaling governor.
+nov. 30 14:35:39 raspberrypi systemd[1]: Started LSB: Switch to ondemand cpu governor (unless shift key is pressed).
+-- Subject: L'unité (unit) raspi-config.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) raspi-config.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: carrier acquired
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: IAID eb:b1:3d:75
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: adding address fe80::cb63:8ac6:962e:e6a2
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: wlan0: probing address 10.3.141.1/24
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface wlan0.IPv6 with address fe80::cb63:8ac6:962e:e6a2.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: New relevant interface wlan0.IPv6 for mDNS.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Registering new address record for fe80::cb63:8ac6:962e:e6a2 on wlan0.*.
+nov. 30 14:35:39 raspberrypi dnsmasq[528]: [0;1;39maucun serveur trouvé dans /run/dnsmasq/resolv.conf, va réessayer[0m
+nov. 30 14:35:39 raspberrypi dnsmasq[529]: Too few arguments.
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: eth0: carrier acquired
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: eth0: IAID eb:e4:68:20
+nov. 30 14:35:39 raspberrypi dhcpcd[388]: eth0: adding address fe80::29de:20e3:7cbe:dd9e
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface eth0.IPv6 with address fe80::29de:20e3:7cbe:dd9e.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: New relevant interface eth0.IPv6 for mDNS.
+nov. 30 14:35:39 raspberrypi avahi-daemon[358]: Registering new address record for fe80::29de:20e3:7cbe:dd9e on eth0.*.
+nov. 30 14:35:39 raspberrypi dnsmasq[529]: Too few arguments.
+nov. 30 14:35:39 raspberrypi systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+-- Subject: L'unité (unit) dnsmasq.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:39 raspberrypi systemd[1]: Reached target Host and Network Name Lookups.
+-- Subject: L'unité (unit) nss-lookup.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) nss-lookup.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:40 raspberrypi systemd[1]: Started Lighttpd Daemon.
+-- Subject: L'unité (unit) lighttpd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) lighttpd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:40 raspberrypi dhcpcd[388]: eth0: rebinding lease of 192.168.1.101
+nov. 30 14:35:40 raspberrypi dhcpcd[388]: eth0: probing address 192.168.1.101/24
+nov. 30 14:35:40 raspberrypi dhcpcd[388]: wlan0: soliciting an IPv6 router
+nov. 30 14:35:40 raspberrypi dhcpcd[388]: eth0: soliciting an IPv6 router
+nov. 30 14:35:42 raspberrypi lightdm[635]: [0;1;39mError getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files[0m
+nov. 30 14:35:43 raspberrypi lightdm[635]: pam_unix(lightdm-autologin:session): session opened for user pi by (uid=0)
+nov. 30 14:35:43 raspberrypi systemd[1]: Created slice User Slice of pi.
+-- Subject: L'unité (unit) user-1000.slice a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) user-1000.slice a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[1]: Starting User Manager for UID 1000...
+-- Subject: L'unité (unit) user@1000.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) user@1000.service a commencé à démarrer.
+nov. 30 14:35:43 raspberrypi systemd-logind[356]: New session c1 of user pi.
+-- Subject: Une nouvelle session c1 a été créée pour l'utilisateur pi
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: http://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- Une nouvelle session a été créée pour l'utilisateur pi avec
+-- l'identifiant (ID) c1.
+-- 
+-- Le processus maître de la session est 635.
+nov. 30 14:35:43 raspberrypi systemd[1]: Started Session c1 of user pi.
+-- Subject: L'unité (unit) session-c1.scope a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) session-c1.scope a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: pam_unix(systemd-user:session): session opened for user pi by (uid=0)
+nov. 30 14:35:43 raspberrypi systemd[643]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Reached target Paths.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Reached target Timers.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Starting D-Bus User Message Bus Socket.
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:43 raspberrypi systemd[643]: Listening on GnuPG cryptographic agent (access for web browsers).
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Listening on D-Bus User Message Bus Socket.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Reached target Sockets.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Reached target Basic System.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Reached target Default.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi systemd[643]: Startup finished in 121ms.
+-- Subject: Le démarrage du système est terminé
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Tous les services nécessaires au démarrage du système ont été lancés avec
+-- succès. Notez que cela ne signifie pas que le système est maintenant au
+-- repos, car des services peuvent encore être en train de terminer leur
+-- démarrage.
+-- 
+-- Le chargement du noyau a nécessité KERNEL_USEC microsecondes.
+-- 
+-- Le chargement du « RAM disk » initial a nécessité INITRD_USEC microsecondes.
+-- 
+-- Le chargement de l'espace utilisateur a nécessité 121511 microsecondes.
+nov. 30 14:35:43 raspberrypi systemd[1]: Started User Manager for UID 1000.
+-- Subject: L'unité (unit) user@1000.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) user@1000.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:43 raspberrypi lightdm[464]: Error opening audit socket: Protocol not supported
+nov. 30 14:35:43 raspberrypi systemd[643]: Started D-Bus User Message Bus.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: Core ver 2.22
+nov. 30 14:35:44 raspberrypi kernel: NET: Registered protocol family 31
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI device and connection manager initialized
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI socket layer initialized
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: L2CAP socket layer initialized
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: SCO socket layer initialized
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI UART driver ver 2.3
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI UART protocol H4 registered
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI UART protocol Three-wire (H5) registered
+nov. 30 14:35:44 raspberrypi kernel: Bluetooth: HCI UART protocol Broadcom registered
+nov. 30 14:35:44 raspberrypi btuart[366]: bcm43xx_init
+nov. 30 14:35:44 raspberrypi btuart[366]: Flash firmware /lib/firmware/brcm/BCM4345C0.hcd
+nov. 30 14:35:44 raspberrypi btuart[366]: Set BDADDR UART: b8:27:eb:4e:c2:8a
+nov. 30 14:35:44 raspberrypi btuart[366]: Set Controller UART speed to 3000000 bit/s
+nov. 30 14:35:44 raspberrypi btuart[366]: Device setup complete
+nov. 30 14:35:44 raspberrypi systemd[1]: Starting Load/Save RF Kill Switch Status...
+-- Subject: L'unité (unit) systemd-rfkill.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-rfkill.service a commencé à démarrer.
+nov. 30 14:35:44 raspberrypi systemd[1]: Started Configure Bluetooth Modems connected by UART.
+-- Subject: L'unité (unit) hciuart.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hciuart.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Reached target Multi-User System.
+-- Subject: L'unité (unit) multi-user.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) multi-user.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Starting scanner...
+-- Subject: L'unité (unit) scanner.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a commencé à démarrer.
+nov. 30 14:35:44 raspberrypi systemd[1]: Started RaspAP daemon.
+-- Subject: L'unité (unit) raspap.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) raspap.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Reached target Graphical Interface.
+-- Subject: L'unité (unit) graphical.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) graphical.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Starting Update UTMP about System Runlevel Changes...
+-- Subject: L'unité (unit) systemd-update-utmp-runlevel.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-update-utmp-runlevel.service a commencé à démarrer.
+nov. 30 14:35:44 raspberrypi dhcpcd[388]: eth0: leased 192.168.1.101 for 86400 seconds
+nov. 30 14:35:44 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface eth0.IPv4 with address 192.168.1.101.
+nov. 30 14:35:44 raspberrypi dhcpcd[388]: eth0: adding route to 192.168.1.0/24
+nov. 30 14:35:44 raspberrypi avahi-daemon[358]: New relevant interface eth0.IPv4 for mDNS.
+nov. 30 14:35:44 raspberrypi avahi-daemon[358]: Registering new address record for 192.168.1.101 on eth0.IPv4.
+nov. 30 14:35:44 raspberrypi dhcpcd[388]: eth0: adding default route via 192.168.1.1
+nov. 30 14:35:44 raspberrypi systemd[1]: Started Load/Save RF Kill Switch Status.
+-- Subject: L'unité (unit) systemd-rfkill.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-rfkill.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Created slice system-bthelper.slice.
+-- Subject: L'unité (unit) system-bthelper.slice a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) system-bthelper.slice a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi systemd[1]: Starting Bluetooth service...
+-- Subject: L'unité (unit) bluetooth.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) bluetooth.service a commencé à démarrer.
+nov. 30 14:35:44 raspberrypi systemd[1]: Started Update UTMP about System Runlevel Changes.
+-- Subject: L'unité (unit) systemd-update-utmp-runlevel.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-update-utmp-runlevel.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:44 raspberrypi dnsmasq[528]: Lecture de /run/dnsmasq/resolv.conf
+nov. 30 14:35:44 raspberrypi dnsmasq[528]: utilise le serveur de nom 192.168.1.1#53
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: Bluetooth daemon 5.43
+nov. 30 14:35:45 raspberrypi systemd[1]: Started Bluetooth service.
+-- Subject: L'unité (unit) bluetooth.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) bluetooth.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi systemd[1]: Reached target Bluetooth.
+-- Subject: L'unité (unit) bluetooth.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) bluetooth.target a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi systemd[1]: Started Raspberry Pi bluetooth helper.
+-- Subject: L'unité (unit) bthelper@hci0.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) bthelper@hci0.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi systemd[1]: Started BluezALSA proxy.
+-- Subject: L'unité (unit) bluealsa.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) bluealsa.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: Starting SDP server
+nov. 30 14:35:45 raspberrypi dbus[337]: [0;1;39m[system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'[0m
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: BNEP filters: protocol multicast
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: BNEP socket layer initialized
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: Bluetooth management interface 1.14 initialized
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: [0;1;31mFailed to obtain handles for "Service Changed" characteristic[0m
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: [0;1;31mSap driver initialization failed.[0m
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: [0;1;31msap-server: Operation not permitted (1)[0m
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: Endpoint registered: sender=:1.12 path=/A2DP/SBC/Source/1
+nov. 30 14:35:45 raspberrypi systemd[1]: Starting Hostname Service...
+-- Subject: L'unité (unit) systemd-hostnamed.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-hostnamed.service a commencé à démarrer.
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: RFCOMM TTY layer initialized
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: RFCOMM socket layer initialized
+nov. 30 14:35:45 raspberrypi kernel: Bluetooth: RFCOMM ver 1.11
+nov. 30 14:35:45 raspberrypi dhcpcd[388]: wlan0: using static address 10.3.141.1/24
+nov. 30 14:35:45 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface wlan0.IPv4 with address 10.3.141.1.
+nov. 30 14:35:45 raspberrypi avahi-daemon[358]: New relevant interface wlan0.IPv4 for mDNS.
+nov. 30 14:35:45 raspberrypi dhcpcd[388]: wlan0: adding route to 10.3.141.0/24
+nov. 30 14:35:45 raspberrypi avahi-daemon[358]: Registering new address record for 10.3.141.1 on wlan0.IPv4.
+nov. 30 14:35:45 raspberrypi dhcpcd[388]: wlan0: adding default route via 10.3.141.1
+nov. 30 14:35:45 raspberrypi bluetoothd[732]: [0;1;31mFailed to set privacy: Rejected (0x0b)[0m
+nov. 30 14:35:45 raspberrypi dbus[337]: [0;1;39m[system] Successfully activated service 'org.freedesktop.hostname1'[0m
+nov. 30 14:35:45 raspberrypi systemd[1]: Started Hostname Service.
+-- Subject: L'unité (unit) systemd-hostnamed.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-hostnamed.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service'
+nov. 30 14:35:45 raspberrypi systemd[643]: Starting Virtual filesystem service...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:45 raspberrypi Node-RED[367]: 30 Nov 14:35:45 - [info]
+nov. 30 14:35:45 raspberrypi Node-RED[367]: Welcome to Node-RED
+nov. 30 14:35:45 raspberrypi Node-RED[367]: ===================
+nov. 30 14:35:45 raspberrypi Node-RED[367]: 30 Nov 14:35:45 - [info] Node-RED version: v1.0.1
+nov. 30 14:35:45 raspberrypi Node-RED[367]: 30 Nov 14:35:45 - [info] Node.js  version: v10.17.0
+nov. 30 14:35:45 raspberrypi Node-RED[367]: 30 Nov 14:35:45 - [info] Linux 4.19.81-v7+ arm LE
+nov. 30 14:35:45 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.Daemon'
+nov. 30 14:35:45 raspberrypi systemd[643]: Started Virtual filesystem service.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:45 raspberrypi kernel: fuse init (API version 7.27)
+nov. 30 14:35:45 raspberrypi systemd[1]: Mounting FUSE Control File System...
+-- Subject: L'unité (unit) sys-fs-fuse-connections.mount a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) sys-fs-fuse-connections.mount a commencé à démarrer.
+nov. 30 14:35:45 raspberrypi systemd[1]: Mounted FUSE Control File System.
+-- Subject: L'unité (unit) sys-fs-fuse-connections.mount a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) sys-fs-fuse-connections.mount a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:46 raspberrypi dbus[337]: [0;1;39m[system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'[0m
+nov. 30 14:35:46 raspberrypi systemd[1]: Starting Authorization Manager...
+-- Subject: L'unité (unit) polkit.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) polkit.service a commencé à démarrer.
+nov. 30 14:35:46 raspberrypi polkitd[859]: started daemon version 0.105 using authority implementation `local' version `0.105'
+nov. 30 14:35:46 raspberrypi dbus[337]: [0;1;39m[system] Successfully activated service 'org.freedesktop.PolicyKit1'[0m
+nov. 30 14:35:46 raspberrypi systemd[1]: Started Authorization Manager.
+-- Subject: L'unité (unit) polkit.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) polkit.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:46 raspberrypi polkitd(authority=local)[859]: [0;1;39mRegistered Authentication Agent for unix-session:c1 (system bus name :1.14 [lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8)[0m
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service'
+nov. 30 14:35:47 raspberrypi systemd[643]: Starting Virtual filesystem service - disk device monitor...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi dbus[337]: [0;1;39m[system] Activating via systemd: service name='org.freedesktop.UDisks2' unit='udisks2.service'[0m
+nov. 30 14:35:47 raspberrypi systemd[1]: Starting Disk Manager...
+-- Subject: L'unité (unit) udisks2.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) udisks2.service a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi udisksd[885]: [0;1;39mudisks daemon version 2.1.8 starting[0m
+nov. 30 14:35:47 raspberrypi dbus[337]: [0;1;39m[system] Successfully activated service 'org.freedesktop.UDisks2'[0m
+nov. 30 14:35:47 raspberrypi systemd[1]: Started Disk Manager.
+-- Subject: L'unité (unit) udisks2.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) udisks2.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:47 raspberrypi udisksd[885]: [0;1;39mCleaning up mount point /media/pi/SETTINGS (device 179:5 is not mounted)[0m
+nov. 30 14:35:47 raspberrypi udisksd[885]: [0;1;39mAcquired the name org.freedesktop.UDisks2 on the system message bus[0m
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+nov. 30 14:35:47 raspberrypi systemd[643]: Started Virtual filesystem service - disk device monitor.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service'
+nov. 30 14:35:47 raspberrypi systemd[643]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+nov. 30 14:35:47 raspberrypi systemd[643]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service'
+nov. 30 14:35:47 raspberrypi systemd[643]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+nov. 30 14:35:47 raspberrypi systemd[643]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service'
+nov. 30 14:35:47 raspberrypi systemd[643]: Starting Virtual filesystem service - Apple File Conduit monitor...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi gvfs-afc-volume-monitor[909]: Volume monitor alive
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+nov. 30 14:35:47 raspberrypi systemd[643]: Started Virtual filesystem service - Apple File Conduit monitor.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service'
+nov. 30 14:35:47 raspberrypi systemd[643]: Starting Virtual filesystem service - digital camera monitor...
+-- Subject: L'unité (unit) UNIT a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a commencé à démarrer.
+nov. 30 14:35:47 raspberrypi dbus-daemon[661]: Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+nov. 30 14:35:47 raspberrypi systemd[643]: Started Virtual filesystem service - digital camera monitor.
+-- Subject: L'unité (unit) UNIT a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) UNIT a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:48 raspberrypi Node-RED[367]: 30 Nov 14:35:48 - [info] Loading palette nodes
+nov. 30 14:35:48 raspberrypi kernel: EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+nov. 30 14:35:48 raspberrypi udisksd[885]: [0;1;39mMounted /dev/mmcblk0p5 at /media/pi/SETTINGS on behalf of uid 1000[0m
+nov. 30 14:35:49 raspberrypi bash[718]: Stopping network services...
+nov. 30 14:35:49 raspberrypi systemd[1]: Stopping Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator...
+-- Subject: L'unité (unit) hostapd.service a commencé à s'arrêter
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a commencé à s'arrêter.
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: wlan0: carrier lost
+nov. 30 14:35:50 raspberrypi kernel: [0;1;31mbrcmfmac: brcmf_cfg80211_stop_ap: setting AP mode failed -52[0m
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: wlan0: deleting default route via 10.3.141.1
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: wlan0: deleting route to 10.3.141.0/24
+nov. 30 14:35:50 raspberrypi avahi-daemon[358]: Withdrawing address record for 10.3.141.1 on wlan0.
+nov. 30 14:35:50 raspberrypi avahi-daemon[358]: Leaving mDNS multicast group on interface wlan0.IPv4 with address 10.3.141.1.
+nov. 30 14:35:50 raspberrypi avahi-daemon[358]: Interface wlan0.IPv4 no longer relevant for mDNS.
+nov. 30 14:35:50 raspberrypi systemd[1]: Stopped Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator.
+-- Subject: L'unité (unit) hostapd.service a terminé son arrêt
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a terminé son arrêt.
+nov. 30 14:35:50 raspberrypi systemd[1]: Stopping dnsmasq - A lightweight DHCP and caching DNS server...
+-- Subject: L'unité (unit) dnsmasq.service a commencé à s'arrêter
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a commencé à s'arrêter.
+nov. 30 14:35:50 raspberrypi dnsmasq[973]: Too few arguments.
+nov. 30 14:35:50 raspberrypi dnsmasq[528]: sortie sur réception du signal SIGTERM
+nov. 30 14:35:50 raspberrypi systemd[1]: Stopped dnsmasq - A lightweight DHCP and caching DNS server.
+-- Subject: L'unité (unit) dnsmasq.service a terminé son arrêt
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a terminé son arrêt.
+nov. 30 14:35:50 raspberrypi systemd[1]: Stopping dhcpcd on all interfaces...
+-- Subject: L'unité (unit) dhcpcd.service a commencé à s'arrêter
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a commencé à s'arrêter.
+nov. 30 14:35:50 raspberrypi dhcpcd[1032]: sending signal TERM to pid 388
+nov. 30 14:35:50 raspberrypi dhcpcd[1032]: waiting for pid 388 to exit
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: received SIGTERM, stopping
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: wlan0: removing interface
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: eth0: removing interface
+nov. 30 14:35:50 raspberrypi dhcpcd[388]: dhcpcd exited
+nov. 30 14:35:50 raspberrypi dhcpcd[1032]: sending signal TERM to pid 388
+nov. 30 14:35:50 raspberrypi dhcpcd[1032]: waiting for pid 388 to exit
+nov. 30 14:35:51 raspberrypi avahi-daemon[358]: Interface wlan0.IPv6 no longer relevant for mDNS.
+nov. 30 14:35:51 raspberrypi avahi-daemon[358]: Leaving mDNS multicast group on interface wlan0.IPv6 with address fe80::cb63:8ac6:962e:e6a2.
+nov. 30 14:35:51 raspberrypi avahi-daemon[358]: Withdrawing address record for fe80::cb63:8ac6:962e:e6a2 on wlan0.
+nov. 30 14:35:51 raspberrypi systemd[1]: Stopped dhcpcd on all interfaces.
+-- Subject: L'unité (unit) dhcpcd.service a terminé son arrêt
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a terminé son arrêt.
+nov. 30 14:35:51 raspberrypi bash[718]: Starting network services...
+nov. 30 14:35:51 raspberrypi systemd[1]: Starting Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator...
+-- Subject: L'unité (unit) hostapd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a commencé à démarrer.
+nov. 30 14:35:51 raspberrypi hostapd[1038]: Configuration file: /etc/hostapd/hostapd.conf
+nov. 30 14:35:51 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+nov. 30 14:35:51 raspberrypi hostapd[1038]: wlan0: interface state UNINITIALIZED->COUNTRY_UPDATE
+nov. 30 14:35:51 raspberrypi hostapd[1038]: wlan0: Could not connect to kernel driver
+nov. 30 14:35:51 raspberrypi hostapd[1038]: Using interface wlan0 with hwaddr b8:27:eb:b1:3d:75 and ssid "raspi-poste1"
+nov. 30 14:35:51 raspberrypi hostapd[1038]: random: Cannot read from /dev/random: Resource temporarily unavailable
+nov. 30 14:35:51 raspberrypi hostapd[1038]: random: Only 0/20 bytes of strong random data available from /dev/random
+nov. 30 14:35:51 raspberrypi hostapd[1038]: random: Not enough entropy pool available for secure operations
+nov. 30 14:35:51 raspberrypi hostapd[1038]: WPA: Not enough entropy in random pool for secure operations - update keys later when the first station connects
+nov. 30 14:35:51 raspberrypi hostapd[1038]: wlan0: interface state COUNTRY_UPDATE->ENABLED
+nov. 30 14:35:51 raspberrypi hostapd[1038]: wlan0: AP-ENABLED
+nov. 30 14:35:51 raspberrypi systemd[1]: Started Advanced IEEE 802.11 AP and IEEE 802.1X/WPA/WPA2/EAP Authenticator.
+-- Subject: L'unité (unit) hostapd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) hostapd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:51 raspberrypi kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+nov. 30 14:35:52 raspberrypi Node-RED[367]: Traceback (most recent call last):
+nov. 30 14:35:52 raspberrypi Node-RED[367]:   File "<string>", line 1, in <module>
+nov. 30 14:35:52 raspberrypi Node-RED[367]: ImportError: No module named rpi_ws281x
+nov. 30 14:35:52 raspberrypi Node-RED[367]: 30 Nov 14:35:52 - [warn] rpi-neopixels : rpi-gpio.errors.ignorenode
+nov. 30 14:35:53 raspberrypi Node-RED[367]: 30 Nov 14:35:53 - [info] Dashboard version 2.17.1 started at /ui
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Settings file  : /home/pi/.node-red/settings.js
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Context store  : 'default' [module=memory]
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] User directory : /home/pi/.node-red
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [warn] Projects disabled : editorTheme.projects.enabled=false
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Flows file     : /home/pi/.node-red/flows_raspberrypi.json
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [warn]
+nov. 30 14:35:54 raspberrypi Node-RED[367]: ---------------------------------------------------------------------
+nov. 30 14:35:54 raspberrypi Node-RED[367]: Your flow credentials file is encrypted using a system-generated key.
+nov. 30 14:35:54 raspberrypi Node-RED[367]: If the system-generated key is lost for any reason, your credentials
+nov. 30 14:35:54 raspberrypi Node-RED[367]: file will not be recoverable, you will have to delete it and re-enter
+nov. 30 14:35:54 raspberrypi Node-RED[367]: your credentials.
+nov. 30 14:35:54 raspberrypi Node-RED[367]: You should set your own key using the 'credentialSecret' option in
+nov. 30 14:35:54 raspberrypi Node-RED[367]: your settings file. Node-RED will then re-encrypt your credentials
+nov. 30 14:35:54 raspberrypi Node-RED[367]: file using your chosen key the next time you deploy a change.
+nov. 30 14:35:54 raspberrypi Node-RED[367]: ---------------------------------------------------------------------
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Starting flows
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Started flows
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] [mqtt-broker:c858bb03.fbd068] Connected to broker: mqtt://localhost:1883
+nov. 30 14:35:54 raspberrypi Node-RED[367]: 30 Nov 14:35:54 - [info] Server now running at http://127.0.0.1:1880/
+nov. 30 14:35:54 raspberrypi systemd[1]: Starting dhcpcd on all interfaces...
+-- Subject: L'unité (unit) dhcpcd.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a commencé à démarrer.
+nov. 30 14:35:54 raspberrypi dhcpcd[1050]: dev: loaded udev
+nov. 30 14:35:54 raspberrypi dhcpcd[1050]: forked to background, child pid 1052
+nov. 30 14:35:54 raspberrypi systemd[1]: Started dhcpcd on all interfaces.
+-- Subject: L'unité (unit) dhcpcd.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dhcpcd.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:54 raspberrypi dhcpcd[1052]: DUID 00:01:00:01:23:7d:9b:29:b8:27:eb:b1:3d:75
+nov. 30 14:35:54 raspberrypi dhcpcd[1052]: eth0: IAID eb:e4:68:20
+nov. 30 14:35:54 raspberrypi dhcpcd[1052]: wlan0: IAID eb:b1:3d:75
+nov. 30 14:35:54 raspberrypi dhcpcd[1052]: wlan0: adding address fe80::cb63:8ac6:962e:e6a2
+nov. 30 14:35:54 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface wlan0.IPv6 with address fe80::cb63:8ac6:962e:e6a2.
+nov. 30 14:35:54 raspberrypi avahi-daemon[358]: New relevant interface wlan0.IPv6 for mDNS.
+nov. 30 14:35:54 raspberrypi dhcpcd[1052]: wlan0: probing address 10.3.141.1/24
+nov. 30 14:35:54 raspberrypi avahi-daemon[358]: Registering new address record for fe80::cb63:8ac6:962e:e6a2 on wlan0.*.
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: eth0: rebinding lease of 192.168.1.101
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: eth0: leased 192.168.1.101 for 86400 seconds
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: eth0: changing route to 192.168.1.0/24
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: eth0: changing default route via 192.168.1.1
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: eth0: soliciting an IPv6 router
+nov. 30 14:35:55 raspberrypi dhcpcd[1052]: wlan0: soliciting an IPv6 router
+nov. 30 14:35:57 raspberrypi systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+-- Subject: L'unité (unit) dnsmasq.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a commencé à démarrer.
+nov. 30 14:35:57 raspberrypi dnsmasq[1071]: dnsmasq: vérification de syntaxe OK.
+nov. 30 14:35:57 raspberrypi dnsmasq[1082]: demarré, version 2.76 (taille de cache 150)
+nov. 30 14:35:57 raspberrypi dnsmasq[1082]: options à la compilation : IPv6 GNU-getopt DBus i18n IDN DHCP DHCPv6 no-Lua TFTP conntrack ipset auth DNSSEC loop-detect inotify
+nov. 30 14:35:57 raspberrypi dnsmasq-dhcp[1082]: DHCP, plage d'adresses IP 10.3.141.50 -- 10.3.141.255, durée de bail 12h
+nov. 30 14:35:57 raspberrypi dnsmasq[1082]: Lecture de /run/dnsmasq/resolv.conf
+nov. 30 14:35:57 raspberrypi dnsmasq[1082]: utilise le serveur de nom 192.168.1.1#53
+nov. 30 14:35:57 raspberrypi dnsmasq[1082]: lecture /etc/hosts - 5 adresses
+nov. 30 14:35:58 raspberrypi dnsmasq[1083]: Too few arguments.
+nov. 30 14:35:58 raspberrypi systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+-- Subject: L'unité (unit) dnsmasq.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) dnsmasq.service a terminé son démarrage, avec le résultat done.
+nov. 30 14:35:58 raspberrypi bash[718]: RaspAP service start DONE
+nov. 30 14:35:59 raspberrypi dhcpcd[1052]: wlan0: using static address 10.3.141.1/24
+nov. 30 14:35:59 raspberrypi avahi-daemon[358]: Joining mDNS multicast group on interface wlan0.IPv4 with address 10.3.141.1.
+nov. 30 14:35:59 raspberrypi avahi-daemon[358]: New relevant interface wlan0.IPv4 for mDNS.
+nov. 30 14:35:59 raspberrypi dhcpcd[1052]: wlan0: adding route to 10.3.141.0/24
+nov. 30 14:35:59 raspberrypi avahi-daemon[358]: Registering new address record for 10.3.141.1 on wlan0.IPv4.
+nov. 30 14:35:59 raspberrypi dhcpcd[1052]: wlan0: adding default route via 10.3.141.1
+déc. 01 09:35:50 raspberrypi systemd[643]: Time has been changed
+-- Subject: Changement d'heure
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'horloge système a été modifiée et positionnée à REALTIME microsecondes
+-- après le 1er janvier 1970.
+déc. 01 09:35:50 raspberrypi systemd-timesyncd[296]: Synchronized to time server 213.251.53.11:123 (2.debian.pool.ntp.org).
+déc. 01 09:35:50 raspberrypi systemd[1]: Time has been changed
+-- Subject: Changement d'heure
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'horloge système a été modifiée et positionnée à REALTIME microsecondes
+-- après le 1er janvier 1970.
+déc. 01 09:35:50 raspberrypi systemd[1]: apt-daily.timer: Adding 4h 8min 13.588360s random time.
+déc. 01 09:35:50 raspberrypi systemd[1]: Reached target Network is Online.
+-- Subject: L'unité (unit) network-online.target a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) network-online.target a terminé son démarrage, avec le résultat done.
+déc. 01 09:35:50 raspberrypi systemd[1]: Starting Daily apt download activities...
+-- Subject: L'unité (unit) apt-daily.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily.service a commencé à démarrer.
+déc. 01 09:35:50 raspberrypi systemd[1]: Starting Clean php session files...
+-- Subject: L'unité (unit) phpsessionclean.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a commencé à démarrer.
+déc. 01 09:35:51 raspberrypi systemd[1]: Started Clean php session files.
+-- Subject: L'unité (unit) phpsessionclean.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a terminé son démarrage, avec le résultat done.
+déc. 01 09:35:51 raspberrypi dhcpcd[1052]: [0;1;39meth0: no IPv6 Routers available[0m
+déc. 01 09:35:52 raspberrypi dhcpcd[1052]: [0;1;39mwlan0: no IPv6 Routers available[0m
+déc. 01 09:35:53 raspberrypi systemd[1]: Started Daily apt download activities.
+-- Subject: L'unité (unit) apt-daily.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily.service a terminé son démarrage, avec le résultat done.
+déc. 01 09:35:53 raspberrypi systemd[1]: apt-daily.timer: Adding 1h 7min 45.880791s random time.
+déc. 01 09:35:53 raspberrypi systemd[1]: apt-daily.timer: Adding 8h 48min 42.637700s random time.
+déc. 01 09:35:53 raspberrypi systemd[1]: Starting Daily apt upgrade and clean activities...
+-- Subject: L'unité (unit) apt-daily-upgrade.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily-upgrade.service a commencé à démarrer.
+déc. 01 09:35:54 raspberrypi systemd[1]: Started Daily apt upgrade and clean activities.
+-- Subject: L'unité (unit) apt-daily-upgrade.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) apt-daily-upgrade.service a terminé son démarrage, avec le résultat done.
+déc. 01 09:35:54 raspberrypi systemd[1]: apt-daily-upgrade.timer: Adding 24min 2.668007s random time.
+déc. 01 09:35:54 raspberrypi systemd[1]: apt-daily-upgrade.timer: Adding 11min 4.699963s random time.
+déc. 01 09:36:59 raspberrypi systemd[1]: [0;1;39mscanner.service: Start operation timed out. Terminating.[0m
+déc. 01 09:36:59 raspberrypi systemd[1]: [0;1;31mFailed to start scanner.[0m
+-- Subject: L'unité (unit) scanner.service a échoué
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a échoué, avec le résultat failed.
+déc. 01 09:36:59 raspberrypi systemd[1]: Startup finished in 1.453s (kernel) + 1min 42.901s (userspace) = 1min 44.354s.
+-- Subject: Le démarrage du système est terminé
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Tous les services nécessaires au démarrage du système ont été lancés avec
+-- succès. Notez que cela ne signifie pas que le système est maintenant au
+-- repos, car des services peuvent encore être en train de terminer leur
+-- démarrage.
+-- 
+-- Le chargement du noyau a nécessité 1453322 microsecondes.
+-- 
+-- Le chargement du « RAM disk » initial a nécessité INITRD_USEC microsecondes.
+-- 
+-- Le chargement de l'espace utilisateur a nécessité 102901322 microsecondes.
+déc. 01 09:36:59 raspberrypi systemd[1]: [0;1;39mscanner.service: Unit entered failed state.[0m
+déc. 01 09:36:59 raspberrypi systemd[1]: [0;1;39mscanner.service: Failed with result 'timeout'.[0m
+déc. 01 09:39:01 raspberrypi CRON[1284]: pam_unix(cron:session): session opened for user root by (uid=0)
+déc. 01 09:39:01 raspberrypi CRON[1288]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+déc. 01 09:39:01 raspberrypi CRON[1284]: pam_unix(cron:session): session closed for user root
+déc. 01 09:39:31 raspberrypi systemd[1]: Starting Clean php session files...
+-- Subject: L'unité (unit) phpsessionclean.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a commencé à démarrer.
+déc. 01 09:39:31 raspberrypi systemd[1]: Started Clean php session files.
+-- Subject: L'unité (unit) phpsessionclean.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a terminé son démarrage, avec le résultat done.
+déc. 01 09:50:46 raspberrypi systemd[1]: Starting Cleanup of Temporary Directories...
+-- Subject: L'unité (unit) systemd-tmpfiles-clean.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-clean.service a commencé à démarrer.
+déc. 01 09:50:46 raspberrypi systemd[1]: Started Cleanup of Temporary Directories.
+-- Subject: L'unité (unit) systemd-tmpfiles-clean.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) systemd-tmpfiles-clean.service a terminé son démarrage, avec le résultat done.
+déc. 01 09:51:03 raspberrypi polkitd(authority=local)[859]: [0;1;39mRegistered Authentication Agent for unix-process:1656:94814 (system bus name :1.22 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8)[0m
+déc. 01 09:51:12 raspberrypi polkitd(authority=local)[859]: [0;1;39mOperator of unix-session:c1 successfully authenticated as unix-user:pi to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.23 [systemctl start scanner] (owned by unix-user:pi)[0m
+déc. 01 09:51:12 raspberrypi systemd[1]: Starting scanner...
+-- Subject: L'unité (unit) scanner.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a commencé à démarrer.
+déc. 01 09:52:42 raspberrypi systemd[1]: [0;1;39mscanner.service: Start operation timed out. Terminating.[0m
+déc. 01 09:52:42 raspberrypi systemd[1]: [0;1;31mFailed to start scanner.[0m
+-- Subject: L'unité (unit) scanner.service a échoué
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a échoué, avec le résultat failed.
+déc. 01 09:52:42 raspberrypi systemd[1]: [0;1;39mscanner.service: Unit entered failed state.[0m
+déc. 01 09:52:42 raspberrypi systemd[1]: [0;1;39mscanner.service: Failed with result 'timeout'.[0m
+déc. 01 09:52:42 raspberrypi polkitd(authority=local)[859]: [0;1;39mUnregistered Authentication Agent for unix-process:1656:94814 (system bus name :1.22, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8) (disconnected from bus)[0m
+déc. 01 09:53:22 raspberrypi lighttpd[607]: Utilisation : grep [OPTION]... MOTIF [FICHIER]...
+déc. 01 09:53:22 raspberrypi lighttpd[607]: Exécutez « grep --help » pour obtenir des renseignements complémentaires.
+déc. 01 09:53:47 raspberrypi lighttpd[607]: Utilisation : grep [OPTION]... MOTIF [FICHIER]...
+déc. 01 09:53:47 raspberrypi lighttpd[607]: Exécutez « grep --help » pour obtenir des renseignements complémentaires.
+déc. 01 10:08:45 raspberrypi polkitd(authority=local)[859]: [0;1;39mRegistered Authentication Agent for unix-process:2170:201051 (system bus name :1.138 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8)[0m
+déc. 01 10:08:52 raspberrypi polkitd(authority=local)[859]: [0;1;39mOperator of unix-session:c1 successfully authenticated as unix-user:pi to gain TEMPORARY authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.139 [systemctl start scanner] (owned by unix-user:pi)[0m
+déc. 01 10:08:52 raspberrypi systemd[1]: Starting scanner...
+-- Subject: L'unité (unit) scanner.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a commencé à démarrer.
+déc. 01 10:09:00 raspberrypi systemd[1]: Starting Clean php session files...
+-- Subject: L'unité (unit) phpsessionclean.service a commencé à démarrer
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a commencé à démarrer.
+déc. 01 10:09:00 raspberrypi systemd[1]: Started Clean php session files.
+-- Subject: L'unité (unit) phpsessionclean.service a terminé son démarrage
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) phpsessionclean.service a terminé son démarrage, avec le résultat done.
+déc. 01 10:09:01 raspberrypi CRON[2233]: pam_unix(cron:session): session opened for user root by (uid=0)
+déc. 01 10:09:01 raspberrypi CRON[2237]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+déc. 01 10:09:01 raspberrypi CRON[2233]: pam_unix(cron:session): session closed for user root
+déc. 01 10:10:22 raspberrypi systemd[1]: [0;1;39mscanner.service: Start operation timed out. Terminating.[0m
+déc. 01 10:10:23 raspberrypi systemd[1]: [0;1;31mFailed to start scanner.[0m
+-- Subject: L'unité (unit) scanner.service a échoué
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- L'unité (unit) scanner.service a échoué, avec le résultat failed.
+déc. 01 10:10:23 raspberrypi systemd[1]: [0;1;39mscanner.service: Unit entered failed state.[0m
+déc. 01 10:10:23 raspberrypi systemd[1]: [0;1;39mscanner.service: Failed with result 'timeout'.[0m
+déc. 01 10:10:23 raspberrypi polkitd(authority=local)[859]: [0;1;39mUnregistered Authentication Agent for unix-process:2170:201051 (system bus name :1.138, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8) (disconnected from bus)[0m
+déc. 01 10:14:42 raspberrypi systemd[1]: [0;1;39mConfiguration file /etc/systemd/scanner.service is marked world-writable. Please remove world writability permission bits. Proceeding anyway.[0m
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] Stopping flows
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] [mqtt-broker:c858bb03.fbd068] Disconnected from broker: mqtt://localhost:1883
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] Stopped flows
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] Starting flows
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] Started flows
+déc. 01 10:16:38 raspberrypi Node-RED[367]: 1 Dec 10:16:38 - [info] [mqtt-broker:c858bb03.fbd068] Connected to broker: mqtt://localhost:1883
+déc. 01 10:17:01 raspberrypi CRON[2326]: pam_unix(cron:session): session opened for user root by (uid=0)
+déc. 01 10:17:01 raspberrypi CRON[2330]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+déc. 01 10:17:01 raspberrypi CRON[2326]: pam_unix(cron:session): session closed for user root

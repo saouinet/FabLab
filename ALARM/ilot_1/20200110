@@ -1,0 +1,20 @@
+Lister les chariots de A à G
+7 chariot crey form
+Tâche: Initialiser les fichier config.yaml
+lire et utiliser fichier de configuration
+
+Mise à jour des ESP32
+Reperer les ESP32
+
+Imprimer un code barre pour chaque chariot: "/Element/#L"
+Imprimer un code barre pour fin d'OF
+
+Mettre a jour la table des idents pour l'ilot Element
+
+solution boîtes
+
+ident bac sans ident 562132
+
+check boot des services
+interface réseau
+sauvegarder la RPi
