@@ -4,32 +4,23 @@ import utime
 import network
 from umqtt.robust import MQTTClient
 
-# constants
-chariot = b"/A"
-ilot = b"/Element"
-TOPIC_OFF = ilot+"/off"
-TOPIC_BLINK = ilot+"/blink"
-LED_OFF =(0,0,0,0)
-LED_WHITE = (0,0,0,100)
-LED_RED = (100, 0, 0, 0)
 
-# define idents configuration
-Idents = getConfig()
-print("Idents :",Idents)
-
-# define LEDs configuration
-nbleds = len(Idents)
-Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
-ActiveLeds = set([i for i in range(len(Idents))])
-
-# define wifi configuration
-sta_if = network.WLAN(network.STA_IF)
-
-# define MQTT configuration
-client = MQTTClient(b"esp32_01"+ilot+chariot,b'10.3.141.1',port=1883)
+#get the configuration dictionary from yaml file
+def getConfig():
+    f = open("config.yaml")
+    contenu = f.read()
+    f.close()
+    choix = contenu.split("\n")
+    config = {}
+    for kv in choix:
+        if kv != '':
+            key,val = kv.split(":")
+            key = key.strip()
+            config[key]=val.strip()
+    return config
 
 # get the list of idents stored in the configuration file
-def getConfig():
+def getIdents():
     f = open("idents.txt")
     config = f.read()
     f.close()
@@ -116,6 +107,30 @@ def connection(sta_if, Leds):
             print("Ready: ", sta_if.ifconfig())
             break
 
+# constants
+configuration = getConfig()
+chariot = configuration["chariot"]
+ilot = configuration["ilot"]
+TOPIC_OFF = ilot+"/off"
+TOPIC_BLINK = ilot+"/blink"
+LED_OFF =(0,0,0,0)
+LED_WHITE = (0,0,0,100)
+LED_RED = (100, 0, 0, 0)
+
+# define idents configuration
+Idents = getIdents()
+print("Idents :",Idents)
+
+# define LEDs configuration
+nbleds = len(Idents)
+Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
+ActiveLeds = set([i for i in range(len(Idents))])
+
+# define wifi configuration
+sta_if = network.WLAN(network.STA_IF)
+
+# define MQTT configuration
+client = MQTTClient(b"esp32_01"+ilot+chariot,configuration["broker"],port=1883)
 blink_active_leds()
 connection(sta_if,Leds)
 init_mqtt(client, Idents,ilot)
