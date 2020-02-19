@@ -106,6 +106,18 @@ def connection(sta_if, Leds):
                 print(".")
             print("Ready: ", sta_if.ifconfig())
             break
+#start ESP32 ok
+def set_green(leds):
+    [leds[i]=LED_GREEN for i in leds]
+    leds.write()
+# ESP32 ok
+def blink_green(leds):
+    [leds[i]=LED_GREEN for i in leds]
+    leds.write()
+    utime.sleep_ms(500)
+    [leds[i]=LED_OFF for i in leds]
+    Leds.write()
+    utime.sleep_ms(500)
 
 # constants
 configuration = getConfig()
@@ -116,6 +128,7 @@ TOPIC_BLINK = ilot+"/blink"
 LED_OFF =(0,0,0,0)
 LED_WHITE = (0,0,0,100)
 LED_RED = (100, 0, 0, 0)
+LED_GREEN = (0, 50, 0, 0)
 
 # define idents configuration
 Idents = getIdents()
@@ -125,12 +138,15 @@ print("Idents :",Idents)
 nbleds = len(Idents)
 Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
 ActiveLeds = set([i for i in range(len(Idents))])
+ESP32leds=neopixel.NeoPixel(machine.Pin(2),nbleds,bpp=4)
+
 
 # define wifi configuration
 sta_if = network.WLAN(network.STA_IF)
 
 # define MQTT configuration
 client = MQTTClient(b"esp32_01"+ilot+chariot,configuration["broker"],port=1883)
+set_green(ESP32leds)
 blink_active_leds()
 connection(sta_if,Leds)
 init_mqtt(client, Idents,ilot)

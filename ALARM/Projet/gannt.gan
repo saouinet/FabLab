@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-11-29" view-index="0" gantt-divider-location="610" resource-divider-location="300" version="2.8.10" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-12-01" view-index="0" gantt-divider-location="610" resource-divider-location="300" version="2.8.10" locale="fr">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="263" order="0"/>
-        <field id="tpd4" name="Date de début" width="164" order="1"/>
-        <field id="tpd5" name="Date de fin" width="164" order="2"/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="268" order="0"/>
+        <field id="tpd4" name="Date de début" width="169" order="1"/>
+        <field id="tpd5" name="Date de fin" width="169" order="2"/>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -33,7 +33,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="39" name="Ilot Element" meeting="false" start="2019-11-29" duration="11" complete="0" expand="true">
+        <task id="39" name="Ilot Element" meeting="false" start="2019-11-29" duration="11" complete="0" expand="false">
             <task id="53" name="Installation RPi" meeting="false" start="2019-11-29" duration="11" complete="0" expand="true">
                 <task id="54" name="Installer RaspAP" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
                 <task id="59" name="installer pip" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
@@ -49,16 +49,17 @@
             </task>
         </task>
         <task id="28" name="Cas de défauts RPi" color="#8cb6ce" meeting="false" start="2019-12-13" duration="1" complete="0" thirdDate="2019-12-13" thirdDate-constraint="0" expand="true"/>
-        <task id="1" name="Installation ESP32 x5" meeting="false" start="2019-11-29" duration="11" complete="0" expand="true">
+        <task id="1" name="Installation ESP32 x5" meeting="false" start="2019-11-29" duration="11" complete="0" expand="false">
             <task id="31" name="Installer micropython" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
             <task id="30" name="Ajouter umqtt.robust" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
             <task id="32" name="Installer le logiciel" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
                 <task id="65" name="copier boot.py" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
                 <task id="66" name="copier main.py" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
                 <task id="67" name="copier idents.txt" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+                <task id="89" name="copier config.yaml" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="11" name="Support de LED" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true">
+        <task id="11" name="Support de LED" meeting="false" start="2019-12-13" duration="1" complete="0" expand="false">
             <depend id="35" type="1" difference="0" hardness="Strong"/>
             <task id="12" name="imprimer les supports" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
         </task>
@@ -66,13 +67,19 @@
             <task id="35" name="Dessiner la carte pour une LED" color="#8cb6ce" meeting="false" start="2019-12-13" duration="1" complete="0" thirdDate="2019-12-13" thirdDate-constraint="0" expand="true">
                 <depend id="34" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="68" name="Dessiner la carte pour le pilotage des chariots" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+            <task id="68" name="Dessiner la carte pour le pilotage des chariots" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Montage manuel]]>
+                </notes>
+            </task>
+            <task id="128" name="Préparer les câbles" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="2" name="Conception mécanique" meeting="false" start="2019-12-16" duration="1" complete="0" expand="true">
+        <task id="2" name="Conception mécanique" meeting="false" start="2019-12-16" duration="39" complete="0" expand="true">
             <task id="34" name="Designer les supports KreyForm" color="#8cb6ce" meeting="false" start="2019-12-16" duration="1" complete="0" thirdDate="2019-12-13" thirdDate-constraint="0" expand="true"/>
+            <task id="102" name="Dessiner le boîtier ESP32" color="#8cb6ce" meeting="false" start="2020-02-06" duration="1" complete="0" thirdDate="2019-12-02" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="4" name="Conception logiciel" meeting="false" start="2019-11-29" duration="11" complete="0" expand="true">
-            <task id="6" name="softs RPi" meeting="false" start="2019-12-06" duration="6" complete="0" expand="true">
+            <task id="6" name="softs RPi" meeting="false" start="2019-12-06" duration="6" complete="0" expand="false">
                 <task id="9" name="détecter le scanner" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
                 <task id="7" name="scanner les codes barre" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
                 <task id="50" name="lister les cas d'emploi" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
@@ -80,36 +87,78 @@
                 <task id="10" name="scanner la fin d'of" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
                 <task id="51" name="Générer le code find'of" meeting="false" start="2019-12-06" duration="1" complete="0" expand="true"/>
             </task>
-            <task id="5" name="soft ESP32" meeting="false" start="2019-11-29" duration="6" complete="0" expand="true">
+            <task id="5" name="soft ESP32" meeting="false" start="2019-11-29" duration="6" complete="0" expand="false">
                 <task id="64" name="configurer la liste des idents" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
-                <task id="52" name="Connecter au poste" meeting="false" start="2019-12-06" duration="1" complete="0" expand="true"/>
+                <task id="52" name="Connecter au poste" color="#8cb6ce" meeting="false" start="2019-12-06" duration="1" complete="0" thirdDate="2019-12-06" thirdDate-constraint="0" expand="true"/>
+                <task id="99" name="configurer un chariot" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="13" name="Boîtiers ESP32" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true">
+        <task id="13" name="Boîtiers ESP32" meeting="false" start="2019-12-13" duration="1" complete="0" expand="false">
             <task id="14" name="Imprimer les boîtiers" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="16" name="Préparer les câbles" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
-        <task id="69" name="Achats" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
-            <task id="70" name="cartes support de LED" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
-            <task id="71" name="cartes pilotage chariot" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+        <task id="75" name="mécanique" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+        <task id="76" name="électronique" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+        <task id="74" name="logiciel" meeting="false" start="2019-11-29" duration="2" complete="0" expand="true">
+            <task id="77" name="systeme d'explotation PI" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true"/>
+            <task id="112" name="micropython" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="40" name="Ilot Switch" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
-        <task id="72" name="préparation des outils" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
-            <task id="74" name="logiciel" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
-                <task id="77" name="systeme d'explotation" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
-            </task>
-            <task id="75" name="mécanique" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
-            <task id="76" name="électronique" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
-        </task>
-        <task id="73" name="Effectuer des essais" color="#000000" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-12-12" thirdDate-constraint="1" expand="true">
+        <task id="73" name="Effectuer des essais" color="#000000" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-12-12" thirdDate-constraint="1" expand="false">
             <task id="79" name="Raspberry pi" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
-                <task id="80" name="tester la mise en route" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+                <task id="80" name="tester la mise en route" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+                    <notes>
+                        <![CDATA[29/11/2019 premier essais
+06/02/2020 mise en route gestion du temps]]>
+                    </notes>
+                </task>
                 <task id="81" name="tester la qualité du réseau(Point d'Accès)" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="85" name="Délais de livraison" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+        <task id="85" name="Gestion des temps" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[
+Delais de livraison
+Temps de montages]]>
+            </notes>
+        </task>
+        <task id="113" name="Fabrication" color="#8cb6ce" meeting="false" start="2019-12-02" duration="10" complete="0" thirdDate="2019-12-02" thirdDate-constraint="0" expand="true">
+            <task id="117" name="ESP32" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true">
+                <task id="121" name="carte électronique" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="118" name="Module LED" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true">
+                <task id="119" name="impression 3D" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="120" name="Câbles" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true">
+                <task id="126" name="Préparer les câbles" meeting="false" start="2019-12-13" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="87" name="Gestion du matériel" meeting="false" start="2019-11-29" duration="2" complete="0" expand="false">
+            <task id="105" name="Livraisons" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true"/>
+            <task id="106" name="Achats" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true"/>
+            <task id="94" name="ESP32" meeting="false" start="2019-12-02" duration="1" complete="0" expand="true">
+                <task id="124" name="cartes" color="#8cb6ce" meeting="false" start="2019-12-02" duration="1" complete="0" thirdDate="2019-12-02" thirdDate-constraint="0" expand="true">
+                    <notes>
+                        <![CDATA[ESP32 AZ delivery]]>
+                    </notes>
+                </task>
+            </task>
+            <task id="96" name="Support de LED" meeting="false" start="2019-11-29" duration="1" complete="0" expand="true">
+                <task id="123" name="cartes" color="#8cb6ce" meeting="false" start="2019-11-29" duration="1" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+                    <notes>
+                        <![CDATA[support de LED]]>
+                    </notes>
+                </task>
+            </task>
+        </task>
     </tasks>
-    <resources/>
+    <resources>
+        <resource id="0" name="Alain Elsaesser" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Slim Aouinet" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Frédéric Heinrich" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Yves Hoog" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Michel Bellezit" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Laurent Remy" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Zachary Aouinet" function="Default:0" contacts="" phone=""/>
+    </resources>
     <allocations/>
     <vacations/>
     <previous/>
