@@ -16,7 +16,7 @@ def getConfig():
         if kv != '':
             key,val = kv.split(":")
             key = key.strip()
-            config[key]=val.strip()
+            config[key]=bytes(val.strip()[1:-1],"utf-8")
     return config
 
 # get the list of idents stored in the configuration file
@@ -27,7 +27,7 @@ def getIdents():
     choix = config.split("\n")
     idents = []
     for kv in choix:
-        idents.append(kv.strip())
+        idents.append(bytes(kv.strip(),"utf-8"))
     return idents
 
 # make the LEDs blink 1 time
@@ -62,13 +62,17 @@ def sub_cb(topic,payload,Leds,nbleds):
 def init_mqtt(client,Idents,ilot):
     print("connect mqtt...")
     res = client.connect()
+    utime.sleep_ms(1000)
+    client.set_callback(sub_cb)
     if not res :
-        client.subscribe(ilot+TOPIC_OFF)
-        client.subscribe(ilot+TOPIC_BLINK)
+        print("sub:",TOPIC_OFF)
+        client.subscribe(TOPIC_OFF)
+        print("sub:",TOPIC_BLINK)
+        client.subscribe(TOPIC_BLINK)
         for _id in Idents:
-            _nom = ilot+"/"+str(_id)
+            _nom = ilot+b"/"+_id
+            print("sub:",_nom)
             client.subscribe(_nom)
-        client.set_callback(sub_cb)
 
 # make the first LED blink red
 def infoleds():
@@ -107,16 +111,18 @@ def connection(sta_if, Leds):
             print("Ready: ", sta_if.ifconfig())
             break
 #start ESP32 ok
-def set_green(leds):
-    [leds[i]=LED_GREEN for i in leds]
+
+LED_GREEN = (0, 50, 0, 0)
+def set_esp_leds(leds,col=LED_GREEN):
+    print(leds,col)
+    for i in range(2):
+        leds[i]=col
     leds.write()
 # ESP32 ok
 def blink_green(leds):
-    [leds[i]=LED_GREEN for i in leds]
-    leds.write()
+    set_esp_leds(leds,LED_GREEN)
     utime.sleep_ms(500)
-    [leds[i]=LED_OFF for i in leds]
-    Leds.write()
+    set_esp_leds(leds,LED_OFF)
     utime.sleep_ms(500)
 
 # constants
@@ -128,7 +134,6 @@ TOPIC_BLINK = ilot+"/blink"
 LED_OFF =(0,0,0,0)
 LED_WHITE = (0,0,0,100)
 LED_RED = (100, 0, 0, 0)
-LED_GREEN = (0, 50, 0, 0)
 
 # define idents configuration
 Idents = getIdents()
@@ -138,15 +143,15 @@ print("Idents :",Idents)
 nbleds = len(Idents)
 Leds=neopixel.NeoPixel(machine.Pin(4),nbleds,bpp=4)
 ActiveLeds = set([i for i in range(len(Idents))])
-ESP32leds=neopixel.NeoPixel(machine.Pin(2),nbleds,bpp=4)
-
+ESP32leds=neopixel.NeoPixel(machine.Pin(2),2,bpp=4)
+set_esp_leds(ESP32leds,LED_GREEN)
 
 # define wifi configuration
 sta_if = network.WLAN(network.STA_IF)
 
 # define MQTT configuration
 client = MQTTClient(b"esp32_01"+ilot+chariot,configuration["broker"],port=1883)
-set_green(ESP32leds)
+
 blink_active_leds()
 connection(sta_if,Leds)
 init_mqtt(client, Idents,ilot)
