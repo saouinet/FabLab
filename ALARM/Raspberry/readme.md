@@ -16,6 +16,9 @@ la liste des fichiers et dossiers du serveur raspberry
 ----
  - update et upgrade
 ----
+  - configurer le wifi avec raspi-config
+   - country : FR
+   
 ## installation de Docker
  - curl -sSL get.docker.com | sh
 ----
@@ -49,3 +52,8 @@ la liste des fichiers et dossiers du serveur raspberry
 - ajouter dossier RPi
 
 - ajouter dossier back-end
+
+## Installation modules python3
+ - pip : sudo apt install python3-pip
+ - evdev : pip3 install evdev
+ - paho : pip3 install paho-mqtt
